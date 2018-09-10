@@ -1,474 +1,558 @@
-	Wed Jan 17 13:06 2018 Time and Allocation Profiling Report  (Final)
+	Thu Jan 18 16:57 2018 Time and Allocation Profiling Report  (Final)
 
 	   mengine +RTS -p -RTS
 
-	total time  =        9.96 secs   (9956 ticks @ 1000 us, 1 processor)
-	total alloc = 11,757,960,920 bytes  (excludes profiling overheads)
+	total time  =       42.89 secs   (42893 ticks @ 1000 us, 1 processor)
+	total alloc = 48,706,553,424 bytes  (excludes profiling overheads)
 
 COST CENTRE                     MODULE             SRC                                     %time %alloc
 
-lookup                          Data.HashMap       Data/HashMap.hs:277:1-56                 17.2    0.3
-alter                           Data.HashMap       Data/HashMap.hs:(431,1)-(436,62)         10.5   12.0
-randomIvalInteger               System.Random      System/Random.hs:(468,1)-(489,76)         4.4   10.1
-stdNext                         System.Random      System/Random.hs:(518,1)-(528,64)         4.2   14.7
-addOrder                        Main               src/Main.hs:(45,1)-(71,134)               4.2    7.9
-union                           Data.Heap.Internal Data/Heap/Internal.hs:(134,1)-(141,79)    3.7    1.7
-addOrderVar.\                   Main               src/Main.hs:(262,50)-(265,57)             3.5    0.0
-randomIvalInteger.f             System.Random      System/Random.hs:(486,8)-(489,76)         2.7    2.3
-getStdRandom                    System.Random      System/Random.hs:(586,1)-(587,26)         2.7    7.7
-view                            Data.Heap          Data/Heap.hs:76:1-54                      2.4    2.7
-some_lookup                     Data.HashMap       Data/HashMap.hs:(271,1)-(273,37)          2.2    0.0
-execOrder                       Main               src/Main.hs:(180,1)-(195,39)              2.2    1.0
-member                          Data.HashMap       Data/HashMap.hs:(262,1)-(264,30)          2.2    0.0
-viewHead                        Data.Heap          Data/Heap.hs:81:1-26                      1.9    1.9
-alter.some_alter                Data.HashMap       Data/HashMap.hs:(433,9)-(436,62)          1.7    1.3
-randomIvalInteger.k             System.Random      System/Random.hs:482:8-20                 1.7    2.7
-randomIvalInteger.magtgt        System.Random      System/Random.hs:483:8-21                 1.7    1.0
-addOrderVar.\.(...)             Main               src/Main.hs:263:51-95                     1.5    1.0
-addOrderVar                     Main               src/Main.hs:(262,1)-(265,58)              1.5    5.2
-randomR                         System.Random      System/Random.hs:342:3-43                 1.4    0.0
-addOrder.newBidLimits           Main               src/Main.hs:57:7-120                      1.3    0.1
-update                          Data.HashMap       Data/HashMap.hs:(397,1)-(401,57)          1.2    0.7
-randomIvalInteger.f.(...)       System.Random      System/Random.hs:488:25-39                1.2    2.0
-insertRandomOrders.\            Main               src/Main.hs:(269,16)-(271,42)             1.1    0.8
-view.\                          Data.Heap          Data/Heap.hs:76:28-44                     1.0    0.1
-randomIvalInteger.f.v'          System.Random      System/Random.hs:489:25-76                0.9    4.7
-addOrder.insertOrUpdateLimitMap Main               src/Main.hs:(69,9)-(71,134)               0.9    1.9
-makeRandomOrder                 Main               src/Main.hs:(233,1)-(237,75)              0.9    2.8
-insertRandomOrders              Main               src/Main.hs:(267,1)-(271,59)              0.6    1.5
-stdNext.z                       System.Random      System/Random.hs:520:17-34                0.3    1.3
-stdNext.s1''                    System.Random      System/Random.hs:524:17-64                0.2    1.3
-stdNext.s2''                    System.Random      System/Random.hs:528:17-64                0.1    1.3
+lookup                          Data.HashMap       Data/HashMap.hs:277:1-56                 13.1    0.3
+stdNext                         System.Random      System/Random.hs:(518,1)-(528,64)        13.0   14.5
+randomIvalInteger               System.Random      System/Random.hs:(468,1)-(489,76)         8.7    9.9
+randomIvalInteger.f             System.Random      System/Random.hs:(486,8)-(489,76)         7.0    2.3
+alter                           Data.HashMap       Data/HashMap.hs:(431,1)-(436,62)          6.0   11.9
+addOrder                        Main               src/Main.hs:(58,1)-(85,134)               4.0    8.4
+getStdRandom                    System.Random      System/Random.hs:(586,1)-(587,26)         3.9    7.6
+randomIvalInteger.f.v'          System.Random      System/Random.hs:489:25-76                3.5    4.6
+union                           Data.Heap.Internal Data/Heap/Internal.hs:(134,1)-(141,79)    2.1    1.3
+insertRandomOrders.\            Main               src/Main.hs:(300,16)-(302,42)             2.1    0.8
+addOrderVar                     Main               src/Main.hs:(293,1)-(296,58)              1.9    5.1
+execOrder                       Main               src/Main.hs:(194,1)-(209,39)              1.8    1.2
+some_lookup                     Data.HashMap       Data/HashMap.hs:(271,1)-(273,37)          1.7    0.0
+randomIvalInteger.f.(...)       System.Random      System/Random.hs:488:25-39                1.7    2.0
+addOrderVar.\                   Main               src/Main.hs:(293,50)-(296,57)             1.6    0.0
+randomIvalInteger.magtgt        System.Random      System/Random.hs:483:8-21                 1.6    1.0
+member                          Data.HashMap       Data/HashMap.hs:(262,1)-(264,30)          1.5    0.0
+view                            Data.Heap          Data/Heap.hs:76:1-54                      1.4    2.6
+makeRandomOrder                 Main               src/Main.hs:(247,1)-(251,75)              1.4    2.8
+randomIvalInteger.k             System.Random      System/Random.hs:482:8-20                 1.3    2.6
+viewHead                        Data.Heap          Data/Heap.hs:81:1-26                      1.3    1.9
+incrementOrderCount             Main               src/Main.hs:44:1-76                       1.0    1.0
+alter.some_alter                Data.HashMap       Data/HashMap.hs:(433,9)-(436,62)          1.0    1.2
+addOrderVar.\.(...)             Main               src/Main.hs:294:51-95                     0.8    1.1
+stdNext.z                       System.Random      System/Random.hs:520:17-34                0.6    1.3
+addOrder.insertOrUpdateLimitMap Main               src/Main.hs:(83,9)-(85,134)               0.5    1.9
+insertRandomOrders              Main               src/Main.hs:(298,1)-(302,57)              0.5    1.5
+stdNext.s1''                    System.Random      System/Random.hs:524:17-64                0.4    1.3
+stdNext.s2''                    System.Random      System/Random.hs:528:17-64                0.4    1.3
 
 
                                                                                                                                      individual      inherited
 COST CENTRE                                        MODULE                SRC                                     no.      entries  %time %alloc   %time %alloc
 
-MAIN                                               MAIN                  <built-in>                               567          0    0.5    0.0   100.0  100.0
- insertRandomOrders.\                              Main                  src/Main.hs:(269,16)-(271,42)           1143    2462504    1.1    0.8    98.8   98.5
-  addOrderVar                                      Main                  src/Main.hs:(262,1)-(265,58)            1224    2462503    1.5    5.2    74.8   45.2
-   addOrderVar.\                                   Main                  src/Main.hs:(262,50)-(265,57)           1225    2462503    3.5    0.0    73.3   40.0
-    addOrderVar.\.(...)                            Main                  src/Main.hs:263:51-95                   1227    2459738    1.5    1.0    69.9   40.0
-     addOrder                                      Main                  src/Main.hs:(45,1)-(71,134)             1229    2459738    4.2    7.9    48.5   28.1
-      addOrder.askLimitMap                         Main                  src/Main.hs:48:7-43                     1292    2459738    0.2    0.0     0.2    0.0
-       ordBookAskLimitMap                          Main                  src/Main.hs:37:3-20                     1293    2459738    0.0    0.0     0.0    0.0
-      addOrder.askLimits                           Main                  src/Main.hs:54:7-39                     1260    2459738    0.2    0.0     0.2    0.0
-       ordBookAskLimits                            Main                  src/Main.hs:39:3-18                     1261    2459738    0.0    0.0     0.0    0.0
-      addOrder.bidLimitMap                         Main                  src/Main.hs:51:7-43                     1249    2459738    0.2    0.0     0.2    0.0
-       ordBookBidLimitMap                          Main                  src/Main.hs:38:3-20                     1250    2459738    0.0    0.0     0.0    0.0
-      addOrder.bidLimits                           Main                  src/Main.hs:56:7-39                     1237    2459738    0.3    0.0     0.3    0.0
-       ordBookBidLimits                            Main                  src/Main.hs:40:3-18                     1238    2459738    0.0    0.0     0.0    0.0
-      addOrder.limitPrice                          Main                  src/Main.hs:47:7-33                     1247    2459738    0.1    0.0     0.4    0.0
-       ordPrice                                    Main                  src/Main.hs:22:3-10                     1248    2459738    0.2    0.0     0.2    0.0
-      addOrder.newAskLimits                        Main                  src/Main.hs:55:7-120                    1262    2459738    0.9    0.1     2.8    1.2
-       ==                                          Main                  src/Main.hs:18:13-14                    1263    2459738    0.0    0.0     0.0    0.0
-       ordType                                     Main                  src/Main.hs:24:3-9                      1264    2459738    0.0    0.0     0.0    0.0
-       insert                                      Data.Heap             Data/Heap.hs:70:1-28                    1297     363419    0.3    0.2     1.8    1.1
-        union                                      Data.Heap.Internal    Data/Heap/Internal.hs:(134,1)-(141,79)  1298     878222    1.2    0.6     1.5    0.8
-         rank                                      Data.Heap.Internal    Data/Heap/Internal.hs:(93,1)-(94,23)    1321    1029606    0.1    0.1     0.1    0.1
-          _rank                                    Data.Heap.Internal    Data/Heap/Internal.hs:44:14-18          1323     728798    0.0    0.0     0.0    0.0
-         size                                      Data.Heap.Internal    Data/Heap/Internal.hs:(98,1)-(99,23)    1324    1029606    0.1    0.1     0.1    0.1
-          _size                                    Data.Heap.Internal    Data/Heap/Internal.hs:45:14-18          1325     728798    0.0    0.0     0.0    0.0
-         _left                                     Data.Heap.Internal    Data/Heap/Internal.hs:48:14-18          1320     514803    0.0    0.0     0.0    0.0
-         _right                                    Data.Heap.Internal    Data/Heap/Internal.hs:49:14-19          1322     514803    0.0    0.0     0.0    0.0
-         union.p1                                  Data.Heap.Internal    Data/Heap/Internal.hs:137:5-24          1316     514803    0.1    0.0     0.1    0.0
-          _priority                                Data.Heap.Internal    Data/Heap/Internal.hs:46:14-22          1317     514803    0.0    0.0     0.0    0.0
-         union.p2                                  Data.Heap.Internal    Data/Heap/Internal.hs:138:5-24          1318     514803    0.1    0.0     0.1    0.0
-          _priority                                Data.Heap.Internal    Data/Heap/Internal.hs:46:14-22          1319     514803    0.0    0.0     0.0    0.0
-        singleton                                  Data.Heap             Data/Heap.hs:66:1-41                    1299     363419    0.1    0.2     0.1    0.2
-         split                                     Data.Heap.Item        Data/Heap/Item.hs:109:5-36              1300     363419    0.0    0.0     0.0    0.0
-      addOrder.newAsklimitMap                      Main                  src/Main.hs:50:7-111                    1294    2459738    0.8    0.3     8.0    8.7
-       ==                                          Main                  src/Main.hs:18:13-14                    1295    2459738    0.0    0.0     0.0    0.0
-       ordType                                     Main                  src/Main.hs:24:3-9                      1296    2459738    0.0    0.0     0.0    0.0
-       addOrder.insertOrUpdateLimitMap             Main                  src/Main.hs:(69,9)-(71,134)             1307    1230675    0.4    0.9     7.2    8.5
-        addOrder.insertOrUpdateLimitMap.limitPrice Main                  src/Main.hs:70:17-43                    1311    1230675    0.0    0.0     0.1    0.0
-         ordPrice                                  Main                  src/Main.hs:22:3-10                     1312    1230675    0.1    0.0     0.1    0.0
-        addOrder.insertOrUpdateMap                 Main                  src/Main.hs:(67,9)-(68,61)              1308    1230675    0.1    0.3     6.7    7.5
-         alter                                     Data.HashMap          Data/HashMap.hs:(431,1)-(436,62)        1309    1230675    5.3    6.1     6.6    7.3
-          alter.some_alter                         Data.HashMap          Data/HashMap.hs:(433,9)-(436,62)        1313    1230675    0.9    0.6     1.2    1.0
-           addOrder.insertOrUpdateMap.\            Main                  src/Main.hs:68:28-54                    1314    1230675    0.4    0.4     0.4    0.4
-            addOrder.insertOrUpdateLimitMap.\      Main                  src/Main.hs:71:100-133                  1466     867256    0.0    0.0     0.0    0.0
-             appendOrder                           Main                  src/Main.hs:230:1-78                    1525       1793    0.0    0.0     0.0    0.0
-              lmtOrders                            Main                  src/Main.hs:30:3-11                     1526       1793    0.0    0.0     0.0    0.0
-          hash                                     Data.Hashable.Class   Data/Hashable/Class.hs:(405,5)-(407,36) 1310    1230675    0.0    0.2     0.0    0.2
-        singleLimit                                Main                  src/Main.hs:227:1-49                    1359     318952    0.0    0.0     0.0    0.0
-        ordId                                      Main                  src/Main.hs:21:3-7                      1506        186    0.0    0.0     0.0    0.0
-      addOrder.newBidLimitMap                      Main                  src/Main.hs:53:7-109                    1266    2459738    0.9    0.3     8.4    8.5
-       ==                                          Main                  src/Main.hs:18:13-14                    1267    2459738    0.0    0.0     0.0    0.0
-       ordType                                     Main                  src/Main.hs:24:3-9                      1268    2459738    0.0    0.0     0.0    0.0
-       addOrder.insertOrUpdateLimitMap             Main                  src/Main.hs:(69,9)-(71,134)             1269    1229063    0.6    0.9     7.5    8.3
-        addOrder.insertOrUpdateLimitMap.limitPrice Main                  src/Main.hs:70:17-43                    1273    1229063    0.1    0.0     0.3    0.0
-         ordPrice                                  Main                  src/Main.hs:22:3-10                     1274    1229063    0.1    0.0     0.1    0.0
-        addOrder.insertOrUpdateMap                 Main                  src/Main.hs:(67,9)-(68,61)              1270    1229063    0.1    0.3     6.7    7.3
-         alter                                     Data.HashMap          Data/HashMap.hs:(431,1)-(436,62)        1271    1229063    5.2    5.9     6.5    7.1
-          alter.some_alter                         Data.HashMap          Data/HashMap.hs:(433,9)-(436,62)        1275    1229063    0.9    0.6     1.3    1.0
-           addOrder.insertOrUpdateMap.\            Main                  src/Main.hs:68:28-54                    1276    1229063    0.4    0.4     0.4    0.4
-            addOrder.insertOrUpdateLimitMap.\      Main                  src/Main.hs:71:100-133                  1464     865571    0.0    0.0     0.0    0.0
-             appendOrder                           Main                  src/Main.hs:230:1-78                    1467       1630    0.0    0.0     0.0    0.0
-              lmtOrders                            Main                  src/Main.hs:30:3-11                     1468       1630    0.0    0.0     0.0    0.0
-          hash                                     Data.Hashable.Class   Data/Hashable/Class.hs:(405,5)-(407,36) 1272    1229063    0.1    0.2     0.1    0.2
-        singleLimit                                Main                  src/Main.hs:227:1-49                    1343     319109    0.0    0.0     0.0    0.0
-        ordId                                      Main                  src/Main.hs:21:3-7                      1523        183    0.0    0.0     0.0    0.0
-        addOrder.insertOrUpdateLimitMap.\          Main                  src/Main.hs:71:100-133                  1528          0    0.0    0.0     0.0    0.0
-         ordId                                     Main                  src/Main.hs:21:3-7                      1529          3    0.0    0.0     0.0    0.0
-      addOrder.newBidLimits                        Main                  src/Main.hs:57:7-120                    1240    2459738    1.3    0.1     3.2    1.2
-       ==                                          Main                  src/Main.hs:18:13-14                    1241    2459738    0.0    0.0     0.0    0.0
-       ordType                                     Main                  src/Main.hs:24:3-9                      1242    2459738    0.0    0.0     0.0    0.0
-       insert                                      Data.Heap             Data/Heap.hs:70:1-28                    1252     363492    0.3    0.2     1.9    1.1
-        union                                      Data.Heap.Internal    Data/Heap/Internal.hs:(134,1)-(141,79)  1253     878799    1.2    0.6     1.5    0.8
-         rank                                      Data.Heap.Internal    Data/Heap/Internal.hs:(93,1)-(94,23)    1283    1030614    0.1    0.1     0.1    0.1
-          _rank                                    Data.Heap.Internal    Data/Heap/Internal.hs:44:14-18          1285     729160    0.0    0.0     0.0    0.0
-         size                                      Data.Heap.Internal    Data/Heap/Internal.hs:(98,1)-(99,23)    1286    1030614    0.1    0.1     0.1    0.1
-          _size                                    Data.Heap.Internal    Data/Heap/Internal.hs:45:14-18          1287     729160    0.0    0.0     0.0    0.0
-         _left                                     Data.Heap.Internal    Data/Heap/Internal.hs:48:14-18          1282     515307    0.0    0.0     0.0    0.0
-         _right                                    Data.Heap.Internal    Data/Heap/Internal.hs:49:14-19          1284     515307    0.0    0.0     0.0    0.0
-         compare                                   Data.Heap.Item        Data/Heap/Item.hs:132:5-43              1277     515307    0.1    0.0     0.1    0.0
-         union.p1                                  Data.Heap.Internal    Data/Heap/Internal.hs:137:5-24          1280     515307    0.1    0.0     0.1    0.0
-          _priority                                Data.Heap.Internal    Data/Heap/Internal.hs:46:14-22          1281     515307    0.0    0.0     0.0    0.0
-         union.p2                                  Data.Heap.Internal    Data/Heap/Internal.hs:138:5-24          1278     515307    0.0    0.0     0.0    0.0
-          _priority                                Data.Heap.Internal    Data/Heap/Internal.hs:46:14-22          1279     515307    0.0    0.0     0.0    0.0
-        singleton                                  Data.Heap             Data/Heap.hs:66:1-41                    1254     363492    0.1    0.2     0.1    0.2
-         split                                     Data.Heap.Item        Data/Heap/Item.hs:128:5-36              1255     363492    0.0    0.0     0.0    0.0
-      addOrder.hasAskPriceLimit                    Main                  src/Main.hs:49:7-57                     1288    1230675    0.1    0.0    10.4    0.3
-       member                                      Data.HashMap          Data/HashMap.hs:(262,1)-(264,30)        1289    1230675    1.0    0.0    10.3    0.3
-        lookup                                     Data.HashMap          Data/HashMap.hs:277:1-56                1290    1230675    8.2    0.1     9.3    0.3
-         hash                                      Data.Hashable.Class   Data/Hashable/Class.hs:(405,5)-(407,36) 1291    1230675    0.1    0.2     0.1    0.2
-         some_lookup                               Data.HashMap          Data/HashMap.hs:(271,1)-(273,37)        1465     867256    1.0    0.0     1.0    0.0
-      addOrder.hasBidPriceLimit                    Main                  src/Main.hs:52:7-57                     1243    1229063    0.1    0.0    10.3    0.3
-       member                                      Data.HashMap          Data/HashMap.hs:(262,1)-(264,30)        1244    1229063    1.1    0.0    10.2    0.3
-        lookup                                     Data.HashMap          Data/HashMap.hs:277:1-56                1245    1229063    7.9    0.1     9.0    0.3
-         hash                                      Data.Hashable.Class   Data/Hashable/Class.hs:(405,5)-(407,36) 1246    1229063    0.1    0.2     0.1    0.2
-         some_lookup                               Data.HashMap          Data/HashMap.hs:(271,1)-(273,37)        1463     865571    1.0    0.0     1.0    0.0
-     execOrder                                     Main                  src/Main.hs:(180,1)-(195,39)            1230    2459738    2.2    1.0    19.9   10.9
-      execOrder.isPriceCrossed                     Main                  src/Main.hs:191:9-64                    1231    2780471    0.4    0.0     5.3    3.0
-       execOrder.priceCrossed                      Main                  src/Main.hs:(192,9)-(195,39)            1232    2780471    0.7    0.0     4.9    3.0
-        getBestAsk                                 Main                  src/Main.hs:218:1-52                    1256    2780471    0.4    0.0     1.9    1.5
-         ordBookAskLimits                          Main                  src/Main.hs:39:3-18                     1257    2780471    0.0    0.0     0.0    0.0
-         viewHead                                  Data.Heap             Data/Heap.hs:81:1-26                    1258    2780471    0.8    0.9     1.5    1.5
-          view                                     Data.Heap             Data/Heap.hs:76:1-54                    1259    2780471    0.5    0.6     0.8    0.6
-           _priority                               Data.Heap.Internal    Data/Heap/Internal.hs:46:14-22          1301    2780466    0.0    0.0     0.0    0.0
-           view.\                                  Data.Heap             Data/Heap.hs:76:28-44                   1302    2780466    0.3    0.0     0.3    0.0
-            merge                                  Data.Heap.Item        Data/Heap/Item.hs:110:5-25              1303    2780466    0.0    0.0     0.0    0.0
-        getBestBid                                 Main                  src/Main.hs:217:1-52                    1233    2780471    0.6    0.0     2.3    1.5
-         ordBookBidLimits                          Main                  src/Main.hs:40:3-18                     1234    2780471    0.0    0.0     0.0    0.0
-         viewHead                                  Data.Heap             Data/Heap.hs:81:1-26                    1235    2780471    0.8    0.9     1.7    1.5
-          view                                     Data.Heap             Data/Heap.hs:76:1-54                    1236    2780471    0.6    0.6     0.9    0.6
-           _priority                               Data.Heap.Internal    Data/Heap/Internal.hs:46:14-22          1304    2780466    0.0    0.0     0.0    0.0
-           view.\                                  Data.Heap             Data/Heap.hs:76:28-44                   1305    2780466    0.3    0.0     0.3    0.0
-            merge                                  Data.Heap.Item        Data/Heap/Item.hs:129:5-25              1306    2780466    0.0    0.0     0.0    0.0
-      areBothJust                                  Main                  src/Main.hs:(200,1)-(201,21)            1326     320733    0.0    0.0     0.0    0.0
-      execOrder.(...)                              Main                  src/Main.hs:183:21-59                   1364     320733    0.0    0.0     5.2    3.0
-       popBidOrder                                 Main                  src/Main.hs:(119,1)-(123,82)            1365     320733    0.4    0.5     5.2    3.0
-        popBidOrder.(...)                          Main                  src/Main.hs:122:7-64                    1371     320733    0.0    0.0     4.5    2.5
-         popOrder                                  Main                  src/Main.hs:(110,1)-(116,54)            1372     320733    0.3    0.5     4.4    2.5
-          popOrder.(...)                           Main                  src/Main.hs:114:23-83                   1386     320733    0.2    0.2     1.5    0.6
-           popOrderFromLimitMap                    Main                  src/Main.hs:(83,1)-(86,22)              1387     320733    0.1    0.0     1.3    0.4
-            popOrderFromLimitMap.newMap            Main                  src/Main.hs:85:7-82                     1388     320733    0.1    0.0     1.3    0.4
-             update                                Data.HashMap          Data/HashMap.hs:(397,1)-(401,57)        1389     320733    0.8    0.4     1.2    0.4
-              hash                                 Data.Hashable.Class   Data/Hashable/Class.hs:(405,5)-(407,36) 1390     320733    0.0    0.0     0.0    0.0
-              update.some_update                   Data.HashMap          Data/HashMap.hs:(399,9)-(401,57)        1396     320733    0.2    0.0     0.4    0.0
-               popOrderFromLimitMap.newMap.\       Main                  src/Main.hs:85:37-65                    1397     320733    0.1    0.0     0.2    0.0
-                popOrderFromLimit                  Main                  src/Main.hs:(75,1)-(79,113)             1398     320733    0.1    0.0     0.1    0.0
-                 popOrderFromLimit.orders          Main                  src/Main.hs:76:7-30                     1399     320733    0.0    0.0     0.0    0.0
-                  lmtOrders                        Main                  src/Main.hs:30:3-11                     1400     320733    0.0    0.0     0.0    0.0
-          popOrder.mprice                          Main                  src/Main.hs:111:7-31                    1373     320733    0.1    0.0     0.4    0.1
-           viewHead                                Data.Heap             Data/Heap.hs:81:1-26                    1374     320733    0.1    0.0     0.4    0.1
-            view                                   Data.Heap             Data/Heap.hs:76:1-54                    1375     320733    0.2    0.1     0.2    0.1
-             _priority                             Data.Heap.Internal    Data/Heap/Internal.hs:46:14-22          1391     320733    0.0    0.0     0.0    0.0
-             view.\                                Data.Heap             Data/Heap.hs:76:28-44                   1392     320733    0.0    0.0     0.0    0.0
-              merge                                Data.Heap.Item        Data/Heap/Item.hs:129:5-25              1393     320733    0.0    0.0     0.0    0.0
-          popOrder.newLimit                        Main                  src/Main.hs:115:23-64                   1376     320733    0.0    0.0     2.2    1.3
-           popEmptyLimit                           Main                  src/Main.hs:(136,1)-(142,29)            1377     320733    0.1    0.0     2.2    1.3
-            lookup                                 Data.HashMap          Data/HashMap.hs:277:1-56                1381     320733    0.2    0.0     0.3    0.0
-             hash                                  Data.Hashable.Class   Data/Hashable/Class.hs:(405,5)-(407,36) 1382     320733    0.0    0.0     0.0    0.0
-             some_lookup                           Data.HashMap          Data/HashMap.hs:(271,1)-(273,37)        1469       1627    0.0    0.0     0.0    0.0
-            popEmptyLimit.m                        Main                  src/Main.hs:137:7-23                    1378     320733    0.2    0.1     1.8    1.2
-             view                                  Data.Heap             Data/Heap.hs:76:1-54                    1379     320733    0.5    0.6     1.6    1.1
-              union                                Data.Heap.Internal    Data/Heap/Internal.hs:(134,1)-(141,79)  1403     579037    0.6    0.3     0.9    0.4
-               rank                                Data.Heap.Internal    Data/Heap/Internal.hs:(93,1)-(94,23)    1458     519862    0.0    0.1     0.0    0.1
-                _rank                              Data.Heap.Internal    Data/Heap/Internal.hs:44:14-18          1459     475841    0.0    0.0     0.0    0.0
-               size                                Data.Heap.Internal    Data/Heap/Internal.hs:(98,1)-(99,23)    1461     519862    0.1    0.1     0.1    0.1
-                _size                              Data.Heap.Internal    Data/Heap/Internal.hs:45:14-18          1462     475841    0.0    0.0     0.0    0.0
-               _left                               Data.Heap.Internal    Data/Heap/Internal.hs:48:14-18          1457     259931    0.0    0.0     0.0    0.0
-               _right                              Data.Heap.Internal    Data/Heap/Internal.hs:49:14-19          1460     259931    0.0    0.0     0.0    0.0
-               compare                             Data.Heap.Item        Data/Heap/Item.hs:132:5-43              1452     259931    0.0    0.0     0.0    0.0
-               union.p1                            Data.Heap.Internal    Data/Heap/Internal.hs:137:5-24          1455     259931    0.1    0.0     0.1    0.0
-                _priority                          Data.Heap.Internal    Data/Heap/Internal.hs:46:14-22          1456     259931    0.0    0.0     0.0    0.0
-               union.p2                            Data.Heap.Internal    Data/Heap/Internal.hs:138:5-24          1453     259931    0.0    0.0     0.0    0.0
-                _priority                          Data.Heap.Internal    Data/Heap/Internal.hs:46:14-22          1454     259931    0.0    0.0     0.0    0.0
-              _priority                            Data.Heap.Internal    Data/Heap/Internal.hs:46:14-22          1384     320733    0.0    0.0     0.0    0.0
-              view.\                               Data.Heap             Data/Heap.hs:76:28-44                   1380     320733    0.2    0.1     0.2    0.1
-               merge                               Data.Heap.Item        Data/Heap/Item.hs:129:5-25              1383     320733    0.0    0.0     0.0    0.0
-              _left                                Data.Heap.Internal    Data/Heap/Internal.hs:48:14-18          1401     319106    0.0    0.0     0.0    0.0
-              _right                               Data.Heap.Internal    Data/Heap/Internal.hs:49:14-19          1402     319106    0.0    0.0     0.0    0.0
-          popOrder.newLimitMap                     Main                  src/Main.hs:114:23-83                   1385     320733    0.0    0.0     0.0    0.0
-        popBidOrder.limit                          Main                  src/Main.hs:120:7-32                    1369     320733    0.0    0.0     0.0    0.0
-         ordBookBidLimits                          Main                  src/Main.hs:40:3-18                     1370     320733    0.0    0.0     0.0    0.0
-        popBidOrder.limitMap                       Main                  src/Main.hs:121:7-37                    1394     320733    0.1    0.0     0.1    0.0
-         ordBookBidLimitMap                        Main                  src/Main.hs:38:3-20                     1395     320733    0.0    0.0     0.0    0.0
-        popBidOrder.newLimit                       Main                  src/Main.hs:122:7-64                    1368     320733    0.0    0.0     0.0    0.0
-        popBidOrder.newLimitMap                    Main                  src/Main.hs:122:7-64                    1451     320733    0.1    0.0     0.1    0.0
-      execOrder.(...)                              Main                  src/Main.hs:184:21-60                   1361     320733    0.1    0.1     4.3    3.1
-       popAskOrder                                 Main                  src/Main.hs:(127,1)-(131,82)            1362     320733    0.4    0.6     4.2    3.1
-        popAskOrder.(...)                          Main                  src/Main.hs:130:7-64                    1407     320733    0.1    0.0     3.6    2.4
-         popOrder                                  Main                  src/Main.hs:(110,1)-(116,54)            1408     320733    0.3    0.5     3.5    2.4
-          popOrder.(...)                           Main                  src/Main.hs:114:23-83                   1422     320733    0.2    0.2     1.0    0.6
-           popOrderFromLimitMap                    Main                  src/Main.hs:(83,1)-(86,22)              1423     320733    0.0    0.0     0.8    0.4
-            popOrderFromLimitMap.newMap            Main                  src/Main.hs:85:7-82                     1424     320733    0.0    0.0     0.8    0.4
-             update                                Data.HashMap          Data/HashMap.hs:(397,1)-(401,57)        1425     320733    0.4    0.4     0.8    0.4
-              hash                                 Data.Hashable.Class   Data/Hashable/Class.hs:(405,5)-(407,36) 1426     320733    0.0    0.0     0.0    0.0
-              update.some_update                   Data.HashMap          Data/HashMap.hs:(399,9)-(401,57)        1432     320733    0.2    0.0     0.4    0.0
-               popOrderFromLimitMap.newMap.\       Main                  src/Main.hs:85:37-65                    1433     320733    0.1    0.0     0.2    0.0
-                popOrderFromLimit                  Main                  src/Main.hs:(75,1)-(79,113)             1434     320733    0.0    0.0     0.1    0.0
-                 popOrderFromLimit.orders          Main                  src/Main.hs:76:7-30                     1435     320733    0.0    0.0     0.0    0.0
-                  lmtOrders                        Main                  src/Main.hs:30:3-11                     1436     320733    0.0    0.0     0.0    0.0
-          popOrder.mprice                          Main                  src/Main.hs:111:7-31                    1409     320733    0.1    0.0     0.3    0.1
-           viewHead                                Data.Heap             Data/Heap.hs:81:1-26                    1410     320733    0.1    0.0     0.2    0.1
-            view                                   Data.Heap             Data/Heap.hs:76:1-54                    1411     320733    0.1    0.1     0.1    0.1
-             _priority                             Data.Heap.Internal    Data/Heap/Internal.hs:46:14-22          1427     320733    0.0    0.0     0.0    0.0
-             view.\                                Data.Heap             Data/Heap.hs:76:28-44                   1428     320733    0.0    0.0     0.0    0.0
-              merge                                Data.Heap.Item        Data/Heap/Item.hs:110:5-25              1429     320733    0.0    0.0     0.0    0.0
-          popOrder.newLimit                        Main                  src/Main.hs:115:23-64                   1412     320733    0.0    0.0     1.9    1.3
-           popEmptyLimit                           Main                  src/Main.hs:(136,1)-(142,29)            1413     320733    0.1    0.0     1.9    1.3
-            lookup                                 Data.HashMap          Data/HashMap.hs:277:1-56                1417     320733    0.2    0.0     0.2    0.0
-             hash                                  Data.Hashable.Class   Data/Hashable/Class.hs:(405,5)-(407,36) 1418     320733    0.0    0.0     0.0    0.0
-             some_lookup                           Data.HashMap          Data/HashMap.hs:(271,1)-(273,37)        1527       1787    0.0    0.0     0.0    0.0
-            popEmptyLimit.m                        Main                  src/Main.hs:137:7-23                    1414     320733    0.1    0.1     1.6    1.2
-             view                                  Data.Heap             Data/Heap.hs:76:1-54                    1415     320733    0.4    0.6     1.4    1.1
-              union                                Data.Heap.Internal    Data/Heap/Internal.hs:(134,1)-(141,79)  1439     579487    0.7    0.3     1.0    0.4
-               rank                                Data.Heap.Internal    Data/Heap/Internal.hs:(93,1)-(94,23)    1445     521082    0.1    0.1     0.1    0.1
-                _rank                              Data.Heap.Internal    Data/Heap/Internal.hs:44:14-18          1446     476497    0.0    0.0     0.0    0.0
-               size                                Data.Heap.Internal    Data/Heap/Internal.hs:(98,1)-(99,23)    1448     521082    0.1    0.1     0.1    0.1
-                _size                              Data.Heap.Internal    Data/Heap/Internal.hs:45:14-18          1449     476497    0.0    0.0     0.0    0.0
-               _left                               Data.Heap.Internal    Data/Heap/Internal.hs:48:14-18          1444     260541    0.0    0.0     0.0    0.0
-               _right                              Data.Heap.Internal    Data/Heap/Internal.hs:49:14-19          1447     260541    0.0    0.0     0.0    0.0
-               union.p1                            Data.Heap.Internal    Data/Heap/Internal.hs:137:5-24          1440     260541    0.1    0.0     0.1    0.0
-                _priority                          Data.Heap.Internal    Data/Heap/Internal.hs:46:14-22          1441     260541    0.0    0.0     0.0    0.0
-               union.p2                            Data.Heap.Internal    Data/Heap/Internal.hs:138:5-24          1442     260541    0.0    0.0     0.0    0.0
-                _priority                          Data.Heap.Internal    Data/Heap/Internal.hs:46:14-22          1443     260541    0.0    0.0     0.0    0.0
-              _priority                            Data.Heap.Internal    Data/Heap/Internal.hs:46:14-22          1420     320733    0.0    0.0     0.0    0.0
-              view.\                               Data.Heap             Data/Heap.hs:76:28-44                   1416     320733    0.1    0.1     0.1    0.1
-               merge                               Data.Heap.Item        Data/Heap/Item.hs:110:5-25              1419     320733    0.0    0.0     0.0    0.0
-              _left                                Data.Heap.Internal    Data/Heap/Internal.hs:48:14-18          1437     318946    0.0    0.0     0.0    0.0
-              _right                               Data.Heap.Internal    Data/Heap/Internal.hs:49:14-19          1438     318946    0.0    0.0     0.0    0.0
-          popOrder.newLimitMap                     Main                  src/Main.hs:114:23-83                   1421     320733    0.0    0.0     0.0    0.0
-        popAskOrder.limit                          Main                  src/Main.hs:128:7-32                    1405     320733    0.0    0.0     0.0    0.0
-         ordBookAskLimits                          Main                  src/Main.hs:39:3-18                     1406     320733    0.0    0.0     0.0    0.0
-        popAskOrder.limitMap                       Main                  src/Main.hs:129:7-37                    1430     320733    0.1    0.0     0.1    0.0
-         ordBookAskLimitMap                        Main                  src/Main.hs:37:3-20                     1431     320733    0.0    0.0     0.0    0.0
-        popAskOrder.newLimit                       Main                  src/Main.hs:130:7-64                    1404     320733    0.0    0.0     0.0    0.0
-        popAskOrder.newLimitMap                    Main                  src/Main.hs:130:7-64                    1450     320733    0.1    0.0     0.1    0.0
-      execOrder.book1                              Main                  src/Main.hs:183:21-59                   1363     320733    0.1    0.0     0.1    0.0
-      execOrder.book2                              Main                  src/Main.hs:184:21-60                   1360     320733    0.0    0.0     0.0    0.0
-      execOrder.newBook                            Main                  src/Main.hs:189:21-97                   1366     320733    0.2    0.2     0.2    0.2
-       deleteOrderFromMap                          Main                  src/Main.hs:(106,1)-(107,61)            1367     641466    0.0    0.0     0.0    0.0
-      getBestOrderId                               Main                  src/Main.hs:203:1-70                    1327     320733    0.2    0.0     2.6    0.5
-       getBestAskOrderId                           Main                  src/Main.hs:(210,1)-(213,23)            1344     320733    0.3    0.0     1.1    0.3
-        getBestAsk                                 Main                  src/Main.hs:218:1-52                    1345     320733    0.1    0.0     0.2    0.1
-         ordBookAskLimits                          Main                  src/Main.hs:39:3-18                     1346     320733    0.0    0.0     0.0    0.0
-         viewHead                                  Data.Heap             Data/Heap.hs:81:1-26                    1347     320733    0.0    0.0     0.1    0.1
-          view                                     Data.Heap             Data/Heap.hs:76:1-54                    1348     320733    0.1    0.1     0.1    0.1
-           _priority                               Data.Heap.Internal    Data/Heap/Internal.hs:46:14-22          1349     320733    0.0    0.0     0.0    0.0
-           view.\                                  Data.Heap             Data/Heap.hs:76:28-44                   1350     320733    0.0    0.0     0.0    0.0
-            merge                                  Data.Heap.Item        Data/Heap/Item.hs:110:5-25              1351     320733    0.0    0.0     0.0    0.0
-        getFirstOrderId                            Main                  src/Main.hs:176:1-93                    1356     320733    0.1    0.1     0.1    0.1
-         isEmptyLimit                              Main                  src/Main.hs:225:1-43                    1357     320733    0.1    0.0     0.1    0.0
-          lmtOrders                                Main                  src/Main.hs:30:3-11                     1358     320733    0.0    0.0     0.0    0.0
-        lookup                                     Data.HashMap          Data/HashMap.hs:277:1-56                1352     320733    0.4    0.0     0.4    0.1
-         hash                                      Data.Hashable.Class   Data/Hashable/Class.hs:(405,5)-(407,36) 1353     320733    0.0    0.0     0.0    0.0
-         some_lookup                               Data.HashMap          Data/HashMap.hs:(271,1)-(273,37)        1355     320733    0.1    0.0     0.1    0.0
-        ordBookAskLimitMap                         Main                  src/Main.hs:37:3-20                     1354     320733    0.0    0.0     0.0    0.0
-       getBestBidOrderId                           Main                  src/Main.hs:(205,1)-(208,23)            1328     320733    0.5    0.0     1.4    0.3
-        getBestBid                                 Main                  src/Main.hs:217:1-52                    1329     320733    0.1    0.0     0.3    0.1
-         ordBookBidLimits                          Main                  src/Main.hs:40:3-18                     1330     320733    0.0    0.0     0.0    0.0
-         viewHead                                  Data.Heap             Data/Heap.hs:81:1-26                    1331     320733    0.1    0.0     0.2    0.1
-          view                                     Data.Heap             Data/Heap.hs:76:1-54                    1332     320733    0.0    0.1     0.1    0.1
-           _priority                               Data.Heap.Internal    Data/Heap/Internal.hs:46:14-22          1333     320733    0.0    0.0     0.0    0.0
-           view.\                                  Data.Heap             Data/Heap.hs:76:28-44                   1334     320733    0.1    0.0     0.1    0.0
-            merge                                  Data.Heap.Item        Data/Heap/Item.hs:129:5-25              1335     320733    0.0    0.0     0.0    0.0
-        getFirstOrderId                            Main                  src/Main.hs:176:1-93                    1340     320733    0.1    0.1     0.2    0.1
-         isEmptyLimit                              Main                  src/Main.hs:225:1-43                    1341     320733    0.1    0.0     0.1    0.0
-          lmtOrders                                Main                  src/Main.hs:30:3-11                     1342     320733    0.0    0.0     0.0    0.0
-        lookup                                     Data.HashMap          Data/HashMap.hs:277:1-56                1336     320733    0.4    0.0     0.5    0.1
-         hash                                      Data.Hashable.Class   Data/Hashable/Class.hs:(405,5)-(407,36) 1337     320733    0.0    0.0     0.0    0.0
-         some_lookup                               Data.HashMap          Data/HashMap.hs:(271,1)-(273,37)        1339     320733    0.1    0.0     0.1    0.0
-        ordBookBidLimitMap                         Main                  src/Main.hs:38:3-20                     1338     320733    0.0    0.0     0.0    0.0
-    addOrderVar.\.book                             Main                  src/Main.hs:263:51-95                   1265    2459738    0.0    0.0     0.0    0.0
-  makeRandomOrder                                  Main                  src/Main.hs:(233,1)-(237,75)            1144    2462503    0.9    2.8    22.8   52.4
-   randomRIO                                       System.Random         System/Random.hs:321:3-49               1200    2462503    0.2    0.3    19.7   35.9
-    getStdRandom                                   System.Random         System/Random.hs:(586,1)-(587,26)       1201    2462503    2.4    5.0    19.5   35.5
-     getStdRandom.swap                             System.Random         System/Random.hs:587:9-26               1202    4925006    0.0    0.0     0.0    0.0
-     randomR                                       System.Random         System/Random.hs:342:3-43               1203    4925006    1.4    0.0    17.1   30.5
-      randomIvalInteger                            System.Random         System/Random.hs:(468,1)-(489,76)       1204    4925006    3.9    6.7    15.6   30.5
-       randomIvalInteger.f                         System.Random         System/Random.hs:(486,8)-(489,76)       1207   12312515    2.6    1.8     8.8   21.1
-        randomIvalInteger.f.(...)                  System.Random         System/Random.hs:488:25-39              1210    7387509    1.1    1.5     5.4   15.6
-         stdNext                                   System.Random         System/Random.hs:(518,1)-(528,64)       1211    7387509    3.8   11.1     4.3   14.1
-          stdNext.k                                System.Random         System/Random.hs:522:17-38              1214    7387509    0.0    0.0     0.0    0.0
-          stdNext.k'                               System.Random         System/Random.hs:526:17-38              1217    7387509    0.0    0.0     0.0    0.0
-          stdNext.s1'                              System.Random         System/Random.hs:523:17-59              1215    7387509    0.0    0.0     0.0    0.0
-          stdNext.s1''                             System.Random         System/Random.hs:524:17-64              1216    7387509    0.1    1.0     0.1    1.0
-          stdNext.s2'                              System.Random         System/Random.hs:527:17-60              1218    7387509    0.0    0.0     0.0    0.0
-          stdNext.s2''                             System.Random         System/Random.hs:528:17-64              1219    7387509    0.1    1.0     0.1    1.0
-          stdNext.z                                System.Random         System/Random.hs:520:17-34              1213    7387509    0.3    1.0     0.3    1.0
-          stdNext.z'                               System.Random         System/Random.hs:519:17-58              1212    7387509    0.0    0.0     0.0    0.0
-        randomIvalInteger.f.g'                     System.Random         System/Random.hs:488:25-39              1220    7387509    0.0    0.0     0.0    0.0
-        randomIvalInteger.f.v'                     System.Random         System/Random.hs:489:25-76              1208    7387509    0.8    3.7     0.8    3.7
-        randomIvalInteger.f.x                      System.Random         System/Random.hs:488:25-39              1209    7387509    0.0    0.0     0.0    0.0
-       randomIvalInteger.k                         System.Random         System/Random.hs:482:8-20               1205    4925006    1.5    2.0     1.5    2.0
-       randomIvalInteger.magtgt                    System.Random         System/Random.hs:483:8-21               1206    4925006    1.5    0.7     1.5    0.7
-   randomIO                                        System.Random         System/Random.hs:326:3-40               1147          0    0.0    0.0     2.2   13.7
-    getStdRandom                                   System.Random         System/Random.hs:(586,1)-(587,26)       1148          0    0.2    2.7     2.2   13.7
-     getStdRandom.swap                             System.Random         System/Random.hs:587:9-26               1156    2462503    0.0    0.0     0.0    0.0
-     random                                        System.Random         System/Random.hs:399:3-49               1157    2462503    0.1    0.0     2.0   11.1
-      randomR                                      System.Random         System/Random.hs:(387,3)-(397,30)       1158    2462503    0.1    0.0     1.9   11.1
-       randomR.bool2Int                            System.Random         System/Random.hs:(392,10)-(393,27)      1159    4925006    0.0    0.0     0.0    0.0
-       randomIvalInteger                           System.Random         System/Random.hs:(468,1)-(489,76)       1160    2462503    0.6    3.4     1.8   11.1
-        randomIvalInteger.f                        System.Random         System/Random.hs:(486,8)-(489,76)       1165    4925006    0.1    0.5     0.9    6.7
-         randomIvalInteger.f.(...)                 System.Random         System/Random.hs:488:25-39              1168    2462503    0.1    0.5     0.6    5.2
-          stdNext                                  System.Random         System/Random.hs:(518,1)-(528,64)       1177    2462503    0.5    3.7     0.5    4.7
-           stdNext.k                               System.Random         System/Random.hs:522:17-38              1180    2462503    0.0    0.0     0.0    0.0
-           stdNext.k'                              System.Random         System/Random.hs:526:17-38              1183    2462503    0.0    0.0     0.0    0.0
-           stdNext.s1'                             System.Random         System/Random.hs:523:17-59              1181    2462503    0.0    0.0     0.0    0.0
-           stdNext.s1''                            System.Random         System/Random.hs:524:17-64              1182    2462503    0.0    0.3     0.0    0.3
-           stdNext.s2'                             System.Random         System/Random.hs:527:17-60              1184    2462503    0.0    0.0     0.0    0.0
-           stdNext.s2''                            System.Random         System/Random.hs:528:17-64              1185    2462503    0.0    0.3     0.0    0.3
-           stdNext.z                               System.Random         System/Random.hs:520:17-34              1179    2462503    0.0    0.3     0.0    0.3
-           stdNext.z'                              System.Random         System/Random.hs:519:17-58              1178    2462503    0.0    0.0     0.0    0.0
-         randomIvalInteger.f.g'                    System.Random         System/Random.hs:488:25-39              1198    2462503    0.0    0.0     0.0    0.0
-         randomIvalInteger.f.v'                    System.Random         System/Random.hs:489:25-76              1166    2462503    0.1    1.0     0.1    1.0
-         randomIvalInteger.f.x                     System.Random         System/Random.hs:488:25-39              1167    2462503    0.0    0.0     0.0    0.0
-        randomIvalInteger.k                        System.Random         System/Random.hs:482:8-20               1161    2462503    0.2    0.7     0.2    0.7
-        randomIvalInteger.magtgt                   System.Random         System/Random.hs:483:8-21               1162    2462503    0.2    0.3     0.2    0.3
-       randomR.int2Bool                            System.Random         System/Random.hs:(396,10)-(397,30)      1199    2462503    0.1    0.0     0.1    0.0
- insertRandomOrders                                Main                  src/Main.hs:(267,1)-(271,59)            1141          1    0.0    0.0     0.0    0.0
- CAF                                               Data.Time.Clock.POSIX <entire-module>                          774          0    0.0    0.0     0.0    0.0
- CAF                                               GHC.IO.Encoding       <entire-module>                          615          0    0.0    0.0     0.0    0.0
- CAF                                               GHC.IO.Exception      <entire-module>                          614          0    0.0    0.0     0.0    0.0
- CAF                                               GHC.IO.Handle.FD      <entire-module>                          613          0    0.0    0.0     0.0    0.0
- CAF                                               GHC.IO.Handle.Text    <entire-module>                          612          0    0.0    0.0     0.0    0.0
- CAF                                               GHC.Show              <entire-module>                          598          0    0.0    0.0     0.0    0.0
- CAF                                               GHC.TopHandler        <entire-module>                          597          0    0.0    0.0     0.0    0.0
- CAF                                               GHC.Conc.Signal       <entire-module>                          596          0    0.0    0.0     0.0    0.0
- CAF                                               GHC.IO.Encoding.Iconv <entire-module>                          595          0    0.0    0.0     0.0    0.0
- CAF:$fRandomBool1                                 System.Random         <no location info>                       933          0    0.0    0.0     0.0    0.0
-  randomIO                                         System.Random         System/Random.hs:326:3-40               1145          1    0.0    0.0     0.0    0.0
-   getStdRandom                                    System.Random         System/Random.hs:(586,1)-(587,26)       1146          1    0.0    0.0     0.0    0.0
- CAF:$fRandomGenStdGen_$cnext                      System.Random         System/Random.hs:218:3-6                 784          0    0.0    0.0     0.0    0.0
-  next                                             System.Random         System/Random.hs:218:3-17               1169          1    0.0    0.0     0.0    0.0
- CAF:$fShowLimit8                                  Main                  <no location info>                      1069          0    0.0    0.0     0.0    0.0
-  showsPrec                                        Main                  src/Main.hs:15:28-31                    1504          0    0.0    0.0     0.0    0.0
- CAF:b_rgpW                                        System.Random         System/Random.hs:473:8                   792          0    0.0    0.0     0.0    0.0
-  randomIvalInteger                                System.Random         System/Random.hs:(468,1)-(489,76)       1195          0    0.0    0.0     0.0    0.0
-   randomIvalInteger.b                             System.Random         System/Random.hs:473:8-54               1197          1    0.0    0.0     0.0    0.0
-   randomIvalInteger.genhi                         System.Random         System/Random.hs:472:8-36               1196          1    0.0    0.0     0.0    0.0
- CAF:ds_rgpT                                       System.Random         <no location info>                       789          0    0.0    0.0     0.0    0.0
-  randomIvalInteger                                System.Random         System/Random.hs:(468,1)-(489,76)       1191          0    0.0    0.0     0.0    0.0
-   randomIvalInteger.(...)                         System.Random         System/Random.hs:472:8-36               1192          1    0.0    0.0     0.0    0.0
-    genRange                                       System.Random         System/Random.hs:219:3-23               1193          1    0.0    0.0     0.0    0.0
- CAF:empty                                         Data.Heap.Internal    Data/Heap/Internal.hs:103:1-5            762          0    0.0    0.0     0.0    0.0
-  empty                                            Data.Heap.Internal    Data/Heap/Internal.hs:103:1-13          1239          1    0.0    0.0     0.0    0.0
- CAF:emptyBook                                     Main                  src/Main.hs:221:1-9                      943          0    0.0    0.0     0.0    0.0
-  emptyBook                                        Main                  src/Main.hs:(221,1)-(222,54)            1228          1    0.0    0.0     0.0    0.0
- CAF:fromList1                                     Data.HashMap          <no location info>                       740          0    0.0    0.0     0.0    0.0
-  empty                                            Data.HashMap          Data/HashMap.hs:292:1-19                1251          1    0.0    0.0     0.0    0.0
- CAF:genlo_rgpU                                    System.Random         System/Random.hs:472:9-13                790          0    0.0    0.0     0.0    0.0
-  randomIvalInteger                                System.Random         System/Random.hs:(468,1)-(489,76)       1189          0    0.0    0.0     0.0    0.0
-   randomIvalInteger.genlo                         System.Random         System/Random.hs:472:8-36               1190          1    0.0    0.0     0.0    0.0
- CAF:getStdRandom3                                 System.Random         <no location info>                       780          0    0.0    0.0     0.0    0.0
-  theStdGen                                        System.Random         System/Random.hs:(566,1)-(568,15)       1150          0    0.0    0.0     0.0    0.0
-   mkStdRNG                                        System.Random         System/Random.hs:(452,1)-(455,55)       1151          1    0.0    0.0     0.0    0.0
- CAF:getStdRandom6                                 System.Random         <no location info>                       777          0    0.0    0.0     0.0    0.0
-  getTime                                          System.Random         System/Random.hs:(131,1)-(134,60)       1153          1    0.0    0.0     0.0    0.0
- CAF:insertRandomOrders1                           Main                  <no location info>                       940          0    0.0    0.0     0.6    1.5
-  insertRandomOrders                               Main                  src/Main.hs:(267,1)-(271,59)            1142          0    0.6    1.5     0.6    1.5
- CAF:insertRandomOrders5                           Main                  <no location info>                       942          0    0.0    0.0     0.0    0.0
-  makeRandomOrder                                  Main                  src/Main.hs:(233,1)-(237,75)            1221          0    0.0    0.0     0.0    0.0
-   randomRIO                                       System.Random         System/Random.hs:321:3-49               1222          1    0.0    0.0     0.0    0.0
-    getStdRandom                                   System.Random         System/Random.hs:(586,1)-(587,26)       1223          1    0.0    0.0     0.0    0.0
- CAF:lvl62_rjTB                                    Main                  <no location info>                      1082          0    0.0    0.0     0.0    0.0
-  <                                                Data.Heap.Item        Data/Heap/Item.hs:106:67-69             1315          1    0.0    0.0     0.0    0.0
- CAF:lvl6_rgpV                                     System.Random         <no location info>                       791          0    0.0    0.0     0.0    0.0
-  randomIvalInteger                                System.Random         System/Random.hs:(468,1)-(489,76)       1186          0    0.0    0.0     0.0    0.0
-   randomIvalInteger.f                             System.Random         System/Random.hs:(486,8)-(489,76)       1187          0    0.0    0.0     0.0    0.0
-    randomIvalInteger.f.v'                         System.Random         System/Random.hs:489:25-76              1188          0    0.0    0.0     0.0    0.0
- CAF:lvl71_rjTK                                    Main                  <no location info>                      1094          0    0.0    0.0     0.0    0.0
-  simpleStats                                      Main                  src/Main.hs:(253,1)-(258,68)            1524          0    0.0    0.0     0.0    0.0
- CAF:main1                                         Main                  <no location info>                      1098          0    0.0    0.0     0.0    0.0
-  main                                             Main                  src/Main.hs:(240,1)-(251,17)            1134          1    0.0    0.0     0.0    0.0
- CAF:main2                                         Main                  <no location info>                       944          0    0.0    0.0     0.0    0.0
-  makeBookVar                                      Main                  src/Main.hs:260:1-31                    1137          1    0.0    0.0     0.0    0.0
- CAF:main3                                         Main                  <no location info>                       939          0    0.0    0.0     0.0    0.0
-  main                                             Main                  src/Main.hs:(240,1)-(251,17)            1136          0    0.0    0.0     0.0    0.0
- CAF:q_rgpS                                        System.Random         System/Random.hs:481:8                   788          0    0.0    0.0     0.0    0.0
-  randomIvalInteger                                System.Random         System/Random.hs:(468,1)-(489,76)       1163          0    0.0    0.0     0.0    0.0
-   randomIvalInteger.q                             System.Random         System/Random.hs:481:8-15               1164          1    0.0    0.0     0.0    0.0
- CAF:stdRange                                      System.Random         System/Random.hs:514:1-8                 776          0    0.0    0.0     0.0    0.0
-  stdRange                                         System.Random         System/Random.hs:514:1-26               1194          1    0.0    0.0     0.0    0.0
- CAF:theStdGen                                     System.Random         System/Random.hs:566:1-9                 781          0    0.0    0.0     0.0    0.0
-  theStdGen                                        System.Random         System/Random.hs:(566,1)-(568,15)       1149          1    0.0    0.0     0.0    0.0
-   mkStdRNG                                        System.Random         System/Random.hs:(452,1)-(455,55)       1152          0    0.0    0.0     0.0    0.0
-    createStdGen                                   System.Random         System/Random.hs:276:1-44               1170          1    0.0    0.0     0.0    0.0
-     mkStdGen32                                    System.Random         System/Random.hs:(267,1)-(273,36)       1171          1    0.0    0.0     0.0    0.0
-      mkStdGen32.(...)                             System.Random         System/Random.hs:272:9-39               1173          1    0.0    0.0     0.0    0.0
-      mkStdGen32.q                                 System.Random         System/Random.hs:272:9-39               1176          1    0.0    0.0     0.0    0.0
-      mkStdGen32.s                                 System.Random         System/Random.hs:271:9-45               1174          1    0.0    0.0     0.0    0.0
-      mkStdGen32.s1                                System.Random         System/Random.hs:272:9-39               1172          1    0.0    0.0     0.0    0.0
-      mkStdGen32.s2                                System.Random         System/Random.hs:273:9-36               1175          1    0.0    0.0     0.0    0.0
-    getTime                                        System.Random         System/Random.hs:(131,1)-(134,60)       1154          0    0.0    0.0     0.0    0.0
-     getTime.daytime                               System.Random         System/Random.hs:133:7-44               1155          1    0.0    0.0     0.0    0.0
- main                                              Main                  src/Main.hs:(240,1)-(251,17)            1135          0    0.0    0.0     0.1    0.0
-  main.periodicStatus                              Main                  src/Main.hs:(245,9)-(251,17)            1139          1    0.0    0.0     0.1    0.0
-   main.periodicStatus.loop                        Main                  src/Main.hs:(246,15)-(250,20)           1140          1    0.1    0.0     0.1    0.0
-    simpleStats                                    Main                  src/Main.hs:(253,1)-(258,68)            1226        186    0.0    0.0     0.1    0.0
-     showsPrec                                     Main                  src/Main.hs:15:28-31                    1503        372    0.0    0.0     0.0    0.0
-     size                                          Data.Heap.Internal    Data/Heap/Internal.hs:(98,1)-(99,23)    1484        372    0.0    0.0     0.0    0.0
-      _size                                        Data.Heap.Internal    Data/Heap/Internal.hs:45:14-18          1486        372    0.0    0.0     0.0    0.0
-     getBestAsk                                    Main                  src/Main.hs:218:1-52                    1477        186    0.0    0.0     0.0    0.0
-      ordBookAskLimits                             Main                  src/Main.hs:39:3-18                     1478        186    0.0    0.0     0.0    0.0
-      viewHead                                     Data.Heap             Data/Heap.hs:81:1-26                    1479        186    0.0    0.0     0.0    0.0
-       view                                        Data.Heap             Data/Heap.hs:76:1-54                    1480        186    0.0    0.0     0.0    0.0
-        _priority                                  Data.Heap.Internal    Data/Heap/Internal.hs:46:14-22          1481        186    0.0    0.0     0.0    0.0
-        view.\                                     Data.Heap             Data/Heap.hs:76:28-44                   1482        186    0.0    0.0     0.0    0.0
-         merge                                     Data.Heap.Item        Data/Heap/Item.hs:110:5-25              1483        186    0.0    0.0     0.0    0.0
-     getBestAskOrderId                             Main                  src/Main.hs:(210,1)-(213,23)            1488        186    0.0    0.0     0.0    0.0
-      getBestAsk                                   Main                  src/Main.hs:218:1-52                    1489        186    0.0    0.0     0.0    0.0
-       ordBookAskLimits                            Main                  src/Main.hs:39:3-18                     1490        186    0.0    0.0     0.0    0.0
-       viewHead                                    Data.Heap             Data/Heap.hs:81:1-26                    1491        186    0.0    0.0     0.0    0.0
-        view                                       Data.Heap             Data/Heap.hs:76:1-54                    1492        186    0.0    0.0     0.0    0.0
-         _priority                                 Data.Heap.Internal    Data/Heap/Internal.hs:46:14-22          1493        186    0.0    0.0     0.0    0.0
-         view.\                                    Data.Heap             Data/Heap.hs:76:28-44                   1494        186    0.0    0.0     0.0    0.0
-          merge                                    Data.Heap.Item        Data/Heap/Item.hs:110:5-25              1495        186    0.0    0.0     0.0    0.0
-      getFirstOrderId                              Main                  src/Main.hs:176:1-93                    1500        186    0.0    0.0     0.0    0.0
-       isEmptyLimit                                Main                  src/Main.hs:225:1-43                    1501        186    0.0    0.0     0.0    0.0
-        lmtOrders                                  Main                  src/Main.hs:30:3-11                     1502        186    0.0    0.0     0.0    0.0
-       lmtOrders                                   Main                  src/Main.hs:30:3-11                     1505        186    0.0    0.0     0.0    0.0
-      lookup                                       Data.HashMap          Data/HashMap.hs:277:1-56                1496        186    0.0    0.0     0.0    0.0
-       hash                                        Data.Hashable.Class   Data/Hashable/Class.hs:(405,5)-(407,36) 1497        186    0.0    0.0     0.0    0.0
-       some_lookup                                 Data.HashMap          Data/HashMap.hs:(271,1)-(273,37)        1499        186    0.0    0.0     0.0    0.0
-      ordBookAskLimitMap                           Main                  src/Main.hs:37:3-20                     1498        186    0.0    0.0     0.0    0.0
-     getBestBid                                    Main                  src/Main.hs:217:1-52                    1470        186    0.0    0.0     0.0    0.0
-      ordBookBidLimits                             Main                  src/Main.hs:40:3-18                     1471        186    0.0    0.0     0.0    0.0
-      viewHead                                     Data.Heap             Data/Heap.hs:81:1-26                    1472        186    0.0    0.0     0.0    0.0
-       view                                        Data.Heap             Data/Heap.hs:76:1-54                    1473        186    0.0    0.0     0.0    0.0
-        _priority                                  Data.Heap.Internal    Data/Heap/Internal.hs:46:14-22          1474        186    0.0    0.0     0.0    0.0
-        view.\                                     Data.Heap             Data/Heap.hs:76:28-44                   1475        186    0.0    0.0     0.0    0.0
-         merge                                     Data.Heap.Item        Data/Heap/Item.hs:129:5-25              1476        186    0.0    0.0     0.0    0.0
-     getBestBidOrderId                             Main                  src/Main.hs:(205,1)-(208,23)            1507        186    0.0    0.0     0.0    0.0
-      getBestBid                                   Main                  src/Main.hs:217:1-52                    1508        186    0.0    0.0     0.0    0.0
-       ordBookBidLimits                            Main                  src/Main.hs:40:3-18                     1509        186    0.0    0.0     0.0    0.0
-       viewHead                                    Data.Heap             Data/Heap.hs:81:1-26                    1510        186    0.0    0.0     0.0    0.0
-        view                                       Data.Heap             Data/Heap.hs:76:1-54                    1511        186    0.0    0.0     0.0    0.0
-         _priority                                 Data.Heap.Internal    Data/Heap/Internal.hs:46:14-22          1512        186    0.0    0.0     0.0    0.0
-         view.\                                    Data.Heap             Data/Heap.hs:76:28-44                   1513        186    0.0    0.0     0.0    0.0
-          merge                                    Data.Heap.Item        Data/Heap/Item.hs:129:5-25              1514        186    0.0    0.0     0.0    0.0
-      getFirstOrderId                              Main                  src/Main.hs:176:1-93                    1519        186    0.0    0.0     0.0    0.0
-       isEmptyLimit                                Main                  src/Main.hs:225:1-43                    1520        186    0.0    0.0     0.0    0.0
-        lmtOrders                                  Main                  src/Main.hs:30:3-11                     1521        186    0.0    0.0     0.0    0.0
-       lmtOrders                                   Main                  src/Main.hs:30:3-11                     1522        186    0.0    0.0     0.0    0.0
-      lookup                                       Data.HashMap          Data/HashMap.hs:277:1-56                1515        186    0.0    0.0     0.0    0.0
-       hash                                        Data.Hashable.Class   Data/Hashable/Class.hs:(405,5)-(407,36) 1516        186    0.0    0.0     0.0    0.0
-       some_lookup                                 Data.HashMap          Data/HashMap.hs:(271,1)-(273,37)        1518        186    0.0    0.0     0.0    0.0
-      ordBookBidLimitMap                           Main                  src/Main.hs:38:3-20                     1517        186    0.0    0.0     0.0    0.0
-     ordBookAskLimits                              Main                  src/Main.hs:39:3-18                     1487        186    0.0    0.0     0.0    0.0
-     ordBookBidLimits                              Main                  src/Main.hs:40:3-18                     1485        186    0.0    0.0     0.0    0.0
-  makeBookVar                                      Main                  src/Main.hs:260:1-31                    1138          0    0.0    0.0     0.0    0.0
+MAIN                                               MAIN                  <built-in>                               680          0    0.9    0.0   100.0  100.0
+ insertRandomOrders.\                              Main                  src/Main.hs:(300,16)-(302,42)           1383   10000000    2.1    0.8    98.6   98.3
+  addOrderVar                                      Main                  src/Main.hs:(293,1)-(296,58)            1464   10000000    1.9    5.1    50.4   46.1
+   addOrderVar.\                                   Main                  src/Main.hs:(293,50)-(296,57)           1465   10000000    1.6    0.0    48.5   41.0
+    addOrderVar.\.(...)                            Main                  src/Main.hs:294:51-95                   1480   10000000    0.8    1.1    46.9   41.0
+     addOrder                                      Main                  src/Main.hs:(58,1)-(85,134)             1482   10000000    4.0    8.4    34.0   28.9
+      addOrder.askLimitMap                         Main                  src/Main.hs:61:7-43                     1523   10000000    0.2    0.0     0.2    0.0
+       ordBookAskLimitMap                          Main                  src/Main.hs:49:3-20                     1524   10000000    0.0    0.0     0.0    0.0
+      addOrder.askLimits                           Main                  src/Main.hs:67:7-39                     1513   10000000    0.1    0.0     0.1    0.0
+       ordBookAskLimits                            Main                  src/Main.hs:51:3-18                     1514   10000000    0.0    0.0     0.0    0.0
+      addOrder.bidLimitMap                         Main                  src/Main.hs:64:7-43                     1502   10000000    0.1    0.0     0.1    0.0
+       ordBookBidLimitMap                          Main                  src/Main.hs:50:3-20                     1503   10000000    0.0    0.0     0.0    0.0
+      addOrder.bidLimits                           Main                  src/Main.hs:69:7-39                     1490   10000000    0.2    0.0     0.2    0.0
+       ordBookBidLimits                            Main                  src/Main.hs:52:3-18                     1491   10000000    0.0    0.0     0.0    0.0
+      addOrder.limitPrice                          Main                  src/Main.hs:60:7-33                     1500   10000000    0.1    0.0     0.2    0.0
+       ordPrice                                    Main                  src/Main.hs:23:3-10                     1501   10000000    0.1    0.0     0.1    0.0
+      addOrder.newAskLimits                        Main                  src/Main.hs:68:7-120                    1515   10000000    0.5    0.1     1.4    1.0
+       ==                                          Main                  src/Main.hs:19:13-14                    1516   10000000    0.0    0.0     0.0    0.0
+       ordType                                     Main                  src/Main.hs:25:3-9                      1517   10000000    0.0    0.0     0.0    0.0
+       insert                                      Data.Heap             Data/Heap.hs:70:1-28                    1528    1340077    0.2    0.2     0.9    0.9
+        union                                      Data.Heap.Internal    Data/Heap/Internal.hs:(134,1)-(141,79)  1529    2968129    0.6    0.4     0.7    0.6
+         rank                                      Data.Heap.Internal    Data/Heap/Internal.hs:(93,1)-(94,23)    1552    3256104    0.0    0.1     0.0    0.1
+          _rank                                    Data.Heap.Internal    Data/Heap/Internal.hs:44:14-18          1554    2111361    0.0    0.0     0.0    0.0
+         size                                      Data.Heap.Internal    Data/Heap/Internal.hs:(98,1)-(99,23)    1555    3256104    0.0    0.1     0.0    0.1
+          _size                                    Data.Heap.Internal    Data/Heap/Internal.hs:45:14-18          1556    2111361    0.0    0.0     0.0    0.0
+         _left                                     Data.Heap.Internal    Data/Heap/Internal.hs:48:14-18          1551    1628052    0.0    0.0     0.0    0.0
+         _right                                    Data.Heap.Internal    Data/Heap/Internal.hs:49:14-19          1553    1628052    0.0    0.0     0.0    0.0
+         union.p1                                  Data.Heap.Internal    Data/Heap/Internal.hs:137:5-24          1547    1628052    0.0    0.0     0.0    0.0
+          _priority                                Data.Heap.Internal    Data/Heap/Internal.hs:46:14-22          1548    1628052    0.0    0.0     0.0    0.0
+         union.p2                                  Data.Heap.Internal    Data/Heap/Internal.hs:138:5-24          1549    1628052    0.0    0.0     0.0    0.0
+          _priority                                Data.Heap.Internal    Data/Heap/Internal.hs:46:14-22          1550    1628052    0.0    0.0     0.0    0.0
+        singleton                                  Data.Heap             Data/Heap.hs:66:1-41                    1530    1340077    0.1    0.2     0.1    0.2
+         split                                     Data.Heap.Item        Data/Heap/Item.hs:109:5-36              1531    1340077    0.0    0.0     0.0    0.0
+      addOrder.newAsklimitMap                      Main                  src/Main.hs:63:7-111                    1525   10000000    0.4    0.2     4.6    8.6
+       ==                                          Main                  src/Main.hs:19:13-14                    1526   10000000    0.0    0.0     0.0    0.0
+       ordType                                     Main                  src/Main.hs:25:3-9                      1527   10000000    0.0    0.0     0.0    0.0
+       addOrder.insertOrUpdateLimitMap             Main                  src/Main.hs:(83,9)-(85,134)             1538    4999480    0.3    0.9     4.2    8.4
+        addOrder.insertOrUpdateLimitMap.limitPrice Main                  src/Main.hs:84:17-43                    1542    4999480    0.0    0.0     0.1    0.0
+         ordPrice                                  Main                  src/Main.hs:23:3-10                     1543    4999480    0.0    0.0     0.0    0.0
+        addOrder.insertOrUpdateMap                 Main                  src/Main.hs:(81,9)-(82,61)              1539    4999480    0.1    0.2     3.8    7.4
+         alter                                     Data.HashMap          Data/HashMap.hs:(431,1)-(436,62)        1540    4999480    3.1    6.0     3.7    7.2
+          alter.some_alter                         Data.HashMap          Data/HashMap.hs:(433,9)-(436,62)        1544    4999480    0.5    0.6     0.6    1.0
+           addOrder.insertOrUpdateMap.\            Main                  src/Main.hs:82:28-54                    1545    4999480    0.1    0.4     0.1    0.4
+            addOrder.insertOrUpdateLimitMap.\      Main                  src/Main.hs:85:100-133                  1719    3659403    0.0    0.0     0.0    0.0
+             appendOrder                           Main                  src/Main.hs:244:1-78                    1723       8349    0.0    0.0     0.0    0.0
+              lmtOrders                            Main                  src/Main.hs:31:3-11                     1724       8349    0.0    0.0     0.0    0.0
+          hash                                     Data.Hashable.Class   Data/Hashable/Class.hs:(405,5)-(407,36) 1541    4999480    0.0    0.2     0.0    0.2
+        singleLimit                                Main                  src/Main.hs:241:1-49                    1614    1295680    0.0    0.0     0.0    0.0
+        ordId                                      Main                  src/Main.hs:22:3-7                      1762         35    0.0    0.0     0.0    0.0
+      addOrder.newBidLimitMap                      Main                  src/Main.hs:66:7-109                    1557   10000000    0.5    0.2     4.6    8.4
+       ==                                          Main                  src/Main.hs:19:13-14                    1558   10000000    0.0    0.0     0.0    0.0
+       ordType                                     Main                  src/Main.hs:25:3-9                      1559   10000000    0.0    0.0     0.0    0.0
+       addOrder.insertOrUpdateLimitMap             Main                  src/Main.hs:(83,9)-(85,134)             1560    5000520    0.2    0.9     4.0    8.2
+        addOrder.insertOrUpdateLimitMap.limitPrice Main                  src/Main.hs:84:17-43                    1564    5000520    0.1    0.0     0.1    0.0
+         ordPrice                                  Main                  src/Main.hs:23:3-10                     1565    5000520    0.0    0.0     0.0    0.0
+        addOrder.insertOrUpdateMap                 Main                  src/Main.hs:(81,9)-(82,61)              1561    5000520    0.1    0.2     3.7    7.2
+         alter                                     Data.HashMap          Data/HashMap.hs:(431,1)-(436,62)        1562    5000520    2.9    5.8     3.6    7.0
+          alter.some_alter                         Data.HashMap          Data/HashMap.hs:(433,9)-(436,62)        1566    5000520    0.5    0.6     0.7    1.0
+           addOrder.insertOrUpdateMap.\            Main                  src/Main.hs:82:28-54                    1567    5000520    0.2    0.4     0.2    0.4
+            addOrder.insertOrUpdateLimitMap.\      Main                  src/Main.hs:85:100-133                  1580    3659414    0.0    0.0     0.0    0.0
+             appendOrder                           Main                  src/Main.hs:244:1-78                    1720       7342    0.0    0.0     0.0    0.0
+              lmtOrders                            Main                  src/Main.hs:31:3-11                     1721       7342    0.0    0.0     0.0    0.0
+          hash                                     Data.Hashable.Class   Data/Hashable/Class.hs:(405,5)-(407,36) 1563    5000520    0.1    0.2     0.1    0.2
+        singleLimit                                Main                  src/Main.hs:241:1-49                    1598    1296677    0.0    0.0     0.0    0.0
+        ordId                                      Main                  src/Main.hs:22:3-7                      1779         35    0.0    0.0     0.0    0.0
+      addOrder.newBidLimits                        Main                  src/Main.hs:70:7-120                    1493   10000000    0.9    0.1     1.8    1.0
+       ==                                          Main                  src/Main.hs:19:13-14                    1494   10000000    0.0    0.0     0.0    0.0
+       ordType                                     Main                  src/Main.hs:25:3-9                      1495   10000000    0.0    0.0     0.0    0.0
+       insert                                      Data.Heap             Data/Heap.hs:70:1-28                    1505    1341106    0.1    0.2     0.9    0.9
+        union                                      Data.Heap.Internal    Data/Heap/Internal.hs:(134,1)-(141,79)  1506    2973202    0.6    0.4     0.7    0.6
+         rank                                      Data.Heap.Internal    Data/Heap/Internal.hs:(93,1)-(94,23)    1574    3264192    0.0    0.1     0.0    0.1
+          _rank                                    Data.Heap.Internal    Data/Heap/Internal.hs:44:14-18          1576    2119409    0.0    0.0     0.0    0.0
+         size                                      Data.Heap.Internal    Data/Heap/Internal.hs:(98,1)-(99,23)    1577    3264192    0.0    0.1     0.0    0.1
+          _size                                    Data.Heap.Internal    Data/Heap/Internal.hs:45:14-18          1578    2119409    0.0    0.0     0.0    0.0
+         _left                                     Data.Heap.Internal    Data/Heap/Internal.hs:48:14-18          1573    1632096    0.0    0.0     0.0    0.0
+         _right                                    Data.Heap.Internal    Data/Heap/Internal.hs:49:14-19          1575    1632096    0.0    0.0     0.0    0.0
+         compare                                   Data.Heap.Item        Data/Heap/Item.hs:132:5-43              1568    1632096    0.0    0.0     0.0    0.0
+         union.p1                                  Data.Heap.Internal    Data/Heap/Internal.hs:137:5-24          1571    1632096    0.0    0.0     0.0    0.0
+          _priority                                Data.Heap.Internal    Data/Heap/Internal.hs:46:14-22          1572    1632096    0.0    0.0     0.0    0.0
+         union.p2                                  Data.Heap.Internal    Data/Heap/Internal.hs:138:5-24          1569    1632096    0.0    0.0     0.0    0.0
+          _priority                                Data.Heap.Internal    Data/Heap/Internal.hs:46:14-22          1570    1632096    0.0    0.0     0.0    0.0
+        singleton                                  Data.Heap             Data/Heap.hs:66:1-41                    1507    1341106    0.0    0.2     0.0    0.2
+         split                                     Data.Heap.Item        Data/Heap/Item.hs:128:5-36              1508    1341106    0.0    0.0     0.0    0.0
+      incrementOrderCount                          Main                  src/Main.hs:44:1-76                     1785   10000000    1.0    1.0     1.0    1.0
+       stOrderCount                                Main                  src/Main.hs:36:3-14                     1786   10000000    0.0    0.0     0.0    0.0
+      ordBookStats                                 Main                  src/Main.hs:53:3-14                     1782   10000000    0.0    0.0     0.0    0.0
+      addOrder.hasBidPriceLimit                    Main                  src/Main.hs:65:7-57                     1496    5000520    0.1    0.0     8.0    0.3
+       member                                      Data.HashMap          Data/HashMap.hs:(262,1)-(264,30)        1497    5000520    0.8    0.0     7.9    0.3
+        lookup                                     Data.HashMap          Data/HashMap.hs:277:1-56                1498    5000520    6.3    0.1     7.2    0.3
+         hash                                      Data.Hashable.Class   Data/Hashable/Class.hs:(405,5)-(407,36) 1499    5000520    0.0    0.2     0.0    0.2
+         some_lookup                               Data.HashMap          Data/HashMap.hs:(271,1)-(273,37)        1579    3659414    0.9    0.0     0.9    0.0
+      addOrder.hasAskPriceLimit                    Main                  src/Main.hs:62:7-57                     1519    4999480    0.1    0.0     7.8    0.3
+       member                                      Data.HashMap          Data/HashMap.hs:(262,1)-(264,30)        1520    4999480    0.7    0.0     7.7    0.3
+        lookup                                     Data.HashMap          Data/HashMap.hs:277:1-56                1521    4999480    6.2    0.1     7.0    0.3
+         hash                                      Data.Hashable.Class   Data/Hashable/Class.hs:(405,5)-(407,36) 1522    4999480    0.1    0.2     0.1    0.2
+         some_lookup                               Data.HashMap          Data/HashMap.hs:(271,1)-(273,37)        1718    3659403    0.7    0.0     0.7    0.0
+     execOrder                                     Main                  src/Main.hs:(194,1)-(209,39)            1483   10000000    1.8    1.2    12.1   10.9
+      execOrder.isPriceCrossed                     Main                  src/Main.hs:205:9-64                    1484   11303967    0.3    0.0     3.3    3.0
+       execOrder.priceCrossed                      Main                  src/Main.hs:(206,9)-(209,39)            1485   11303967    0.5    0.0     3.1    3.0
+        getBestAsk                                 Main                  src/Main.hs:232:1-52                    1509   11303967    0.3    0.0     1.3    1.5
+         ordBookAskLimits                          Main                  src/Main.hs:51:3-18                     1510   11303967    0.0    0.0     0.0    0.0
+         viewHead                                  Data.Heap             Data/Heap.hs:81:1-26                    1511   11303967    0.6    0.9     1.1    1.5
+          view                                     Data.Heap             Data/Heap.hs:76:1-54                    1512   11303967    0.3    0.6     0.5    0.6
+           _priority                               Data.Heap.Internal    Data/Heap/Internal.hs:46:14-22          1532   11303966    0.0    0.0     0.0    0.0
+           view.\                                  Data.Heap             Data/Heap.hs:76:28-44                   1533   11303966    0.1    0.0     0.1    0.0
+            merge                                  Data.Heap.Item        Data/Heap/Item.hs:110:5-25              1534   11303966    0.0    0.0     0.0    0.0
+        getBestBid                                 Main                  src/Main.hs:231:1-52                    1486   11303967    0.3    0.0     1.2    1.5
+         ordBookBidLimits                          Main                  src/Main.hs:52:3-18                     1487   11303967    0.0    0.0     0.0    0.0
+         viewHead                                  Data.Heap             Data/Heap.hs:81:1-26                    1488   11303967    0.5    0.9     0.9    1.5
+          view                                     Data.Heap             Data/Heap.hs:76:1-54                    1489   11303967    0.3    0.6     0.5    0.6
+           _priority                               Data.Heap.Internal    Data/Heap/Internal.hs:46:14-22          1535   11303966    0.0    0.0     0.0    0.0
+           view.\                                  Data.Heap             Data/Heap.hs:76:28-44                   1536   11303966    0.1    0.0     0.1    0.0
+            merge                                  Data.Heap.Item        Data/Heap/Item.hs:129:5-25              1537   11303966    0.0    0.0     0.0    0.0
+      areBothJust                                  Main                  src/Main.hs:(214,1)-(215,21)            1581    1303967    0.0    0.0     0.0    0.0
+      execOrder.(...)                              Main                  src/Main.hs:197:21-59                   1619    1303967    0.0    0.0     2.7    2.9
+       popBidOrder                                 Main                  src/Main.hs:(133,1)-(137,82)            1620    1303967    0.1    0.6     2.7    2.9
+        popBidOrder.(...)                          Main                  src/Main.hs:136:7-64                    1626    1303967    0.0    0.0     2.4    2.3
+         popOrder                                  Main                  src/Main.hs:(124,1)-(130,54)            1627    1303967    0.1    0.4     2.4    2.3
+          popOrder.(...)                           Main                  src/Main.hs:128:23-83                   1641    1303967    0.1    0.2     0.7    0.6
+           popOrderFromLimitMap                    Main                  src/Main.hs:(97,1)-(100,22)             1642    1303967    0.0    0.0     0.6    0.4
+            popOrderFromLimitMap.newMap            Main                  src/Main.hs:99:7-82                     1643    1303967    0.0    0.0     0.6    0.4
+             update                                Data.HashMap          Data/HashMap.hs:(397,1)-(401,57)        1644    1303967    0.3    0.4     0.6    0.4
+              hash                                 Data.Hashable.Class   Data/Hashable/Class.hs:(405,5)-(407,36) 1645    1303967    0.0    0.0     0.0    0.0
+              update.some_update                   Data.HashMap          Data/HashMap.hs:(399,9)-(401,57)        1651    1303967    0.1    0.0     0.2    0.0
+               popOrderFromLimitMap.newMap.\       Main                  src/Main.hs:99:37-65                    1652    1303967    0.0    0.0     0.1    0.0
+                popOrderFromLimit                  Main                  src/Main.hs:(89,1)-(93,113)             1653    1303967    0.0    0.0     0.0    0.0
+                 popOrderFromLimit.orders          Main                  src/Main.hs:90:7-30                     1654    1303967    0.0    0.0     0.0    0.0
+                  lmtOrders                        Main                  src/Main.hs:31:3-11                     1655    1303967    0.0    0.0     0.0    0.0
+          popOrder.mprice                          Main                  src/Main.hs:125:7-31                    1628    1303967    0.0    0.0     0.2    0.1
+           viewHead                                Data.Heap             Data/Heap.hs:81:1-26                    1629    1303967    0.0    0.0     0.2    0.1
+            view                                   Data.Heap             Data/Heap.hs:76:1-54                    1630    1303967    0.1    0.1     0.1    0.1
+             _priority                             Data.Heap.Internal    Data/Heap/Internal.hs:46:14-22          1646    1303967    0.0    0.0     0.0    0.0
+             view.\                                Data.Heap             Data/Heap.hs:76:28-44                   1647    1303967    0.0    0.0     0.0    0.0
+              merge                                Data.Heap.Item        Data/Heap/Item.hs:129:5-25              1648    1303967    0.0    0.0     0.0    0.0
+          popOrder.newLimit                        Main                  src/Main.hs:129:23-64                   1631    1303967    0.0    0.0     1.4    1.2
+           popEmptyLimit                           Main                  src/Main.hs:(150,1)-(156,29)            1632    1303967    0.1    0.0     1.3    1.2
+            lookup                                 Data.HashMap          Data/HashMap.hs:277:1-56                1636    1303967    0.1    0.0     0.1    0.0
+             hash                                  Data.Hashable.Class   Data/Hashable/Class.hs:(405,5)-(407,36) 1637    1303967    0.0    0.0     0.0    0.0
+             some_lookup                           Data.HashMap          Data/HashMap.hs:(271,1)-(273,37)        1722       7299    0.0    0.0     0.0    0.0
+            popEmptyLimit.m                        Main                  src/Main.hs:151:7-23                    1633    1303967    0.1    0.1     1.1    1.1
+             view                                  Data.Heap             Data/Heap.hs:76:1-54                    1634    1303967    0.3    0.6     1.0    1.0
+              union                                Data.Heap.Internal    Data/Heap/Internal.hs:(134,1)-(141,79)  1658    2140275    0.5    0.2     0.7    0.3
+               rank                                Data.Heap.Internal    Data/Heap/Internal.hs:(93,1)-(94,23)    1665    1687214    0.0    0.0     0.0    0.0
+                _rank                              Data.Heap.Internal    Data/Heap/Internal.hs:44:14-18          1666    1508872    0.0    0.0     0.0    0.0
+               size                                Data.Heap.Internal    Data/Heap/Internal.hs:(98,1)-(99,23)    1668    1687214    0.0    0.0     0.0    0.0
+                _size                              Data.Heap.Internal    Data/Heap/Internal.hs:45:14-18          1669    1508872    0.0    0.0     0.0    0.0
+               _left                               Data.Heap.Internal    Data/Heap/Internal.hs:48:14-18          1664     843607    0.0    0.0     0.0    0.0
+               _right                              Data.Heap.Internal    Data/Heap/Internal.hs:49:14-19          1667     843607    0.0    0.0     0.0    0.0
+               compare                             Data.Heap.Item        Data/Heap/Item.hs:132:5-43              1659     843607    0.0    0.0     0.0    0.0
+               union.p1                            Data.Heap.Internal    Data/Heap/Internal.hs:137:5-24          1662     843607    0.0    0.0     0.0    0.0
+                _priority                          Data.Heap.Internal    Data/Heap/Internal.hs:46:14-22          1663     843607    0.0    0.0     0.0    0.0
+               union.p2                            Data.Heap.Internal    Data/Heap/Internal.hs:138:5-24          1660     843607    0.0    0.0     0.0    0.0
+                _priority                          Data.Heap.Internal    Data/Heap/Internal.hs:46:14-22          1661     843607    0.0    0.0     0.0    0.0
+              _priority                            Data.Heap.Internal    Data/Heap/Internal.hs:46:14-22          1639    1303967    0.0    0.0     0.0    0.0
+              view.\                               Data.Heap             Data/Heap.hs:76:28-44                   1635    1303967    0.1    0.1     0.1    0.1
+               merge                               Data.Heap.Item        Data/Heap/Item.hs:129:5-25              1638    1303967    0.0    0.0     0.0    0.0
+              _left                                Data.Heap.Internal    Data/Heap/Internal.hs:48:14-18          1656    1296668    0.0    0.0     0.0    0.0
+              _right                               Data.Heap.Internal    Data/Heap/Internal.hs:49:14-19          1657    1296668    0.0    0.0     0.0    0.0
+          popOrder.newLimitMap                     Main                  src/Main.hs:128:23-83                   1640    1303967    0.0    0.0     0.0    0.0
+        popBidOrder.limit                          Main                  src/Main.hs:134:7-32                    1624    1303967    0.0    0.0     0.0    0.0
+         ordBookBidLimits                          Main                  src/Main.hs:52:3-18                     1625    1303967    0.0    0.0     0.0    0.0
+        popBidOrder.limitMap                       Main                  src/Main.hs:135:7-37                    1649    1303967    0.0    0.0     0.0    0.0
+         ordBookBidLimitMap                        Main                  src/Main.hs:50:3-20                     1650    1303967    0.0    0.0     0.0    0.0
+        popBidOrder.newLimit                       Main                  src/Main.hs:136:7-64                    1623    1303967    0.0    0.0     0.0    0.0
+        popBidOrder.newLimitMap                    Main                  src/Main.hs:136:7-64                    1707    1303967    0.1    0.0     0.1    0.0
+      execOrder.(...)                              Main                  src/Main.hs:198:21-60                   1616    1303967    0.0    0.1     2.5    3.0
+       popAskOrder                                 Main                  src/Main.hs:(141,1)-(145,82)            1617    1303967    0.3    0.6     2.5    2.9
+        popAskOrder.(...)                          Main                  src/Main.hs:144:7-64                    1673    1303967    0.0    0.0     2.1    2.3
+         popOrder                                  Main                  src/Main.hs:(124,1)-(130,54)            1674    1303967    0.2    0.4     2.0    2.3
+          popOrder.(...)                           Main                  src/Main.hs:128:23-83                   1688    1303967    0.1    0.2     0.5    0.6
+           popOrderFromLimitMap                    Main                  src/Main.hs:(97,1)-(100,22)             1689    1303967    0.0    0.0     0.4    0.4
+            popOrderFromLimitMap.newMap            Main                  src/Main.hs:99:7-82                     1690    1303967    0.0    0.0     0.4    0.4
+             update                                Data.HashMap          Data/HashMap.hs:(397,1)-(401,57)        1691    1303967    0.2    0.3     0.4    0.4
+              hash                                 Data.Hashable.Class   Data/Hashable/Class.hs:(405,5)-(407,36) 1692    1303967    0.0    0.0     0.0    0.0
+              update.some_update                   Data.HashMap          Data/HashMap.hs:(399,9)-(401,57)        1698    1303967    0.1    0.0     0.2    0.0
+               popOrderFromLimitMap.newMap.\       Main                  src/Main.hs:99:37-65                    1699    1303967    0.0    0.0     0.1    0.0
+                popOrderFromLimit                  Main                  src/Main.hs:(89,1)-(93,113)             1700    1303967    0.0    0.0     0.0    0.0
+                 popOrderFromLimit.orders          Main                  src/Main.hs:90:7-30                     1701    1303967    0.0    0.0     0.0    0.0
+                  lmtOrders                        Main                  src/Main.hs:31:3-11                     1702    1303967    0.0    0.0     0.0    0.0
+          popOrder.mprice                          Main                  src/Main.hs:125:7-31                    1675    1303967    0.0    0.0     0.2    0.1
+           viewHead                                Data.Heap             Data/Heap.hs:81:1-26                    1676    1303967    0.1    0.0     0.1    0.1
+            view                                   Data.Heap             Data/Heap.hs:76:1-54                    1677    1303967    0.0    0.1     0.1    0.1
+             _priority                             Data.Heap.Internal    Data/Heap/Internal.hs:46:14-22          1693    1303967    0.0    0.0     0.0    0.0
+             view.\                                Data.Heap             Data/Heap.hs:76:28-44                   1694    1303967    0.0    0.0     0.0    0.0
+              merge                                Data.Heap.Item        Data/Heap/Item.hs:110:5-25              1695    1303967    0.0    0.0     0.0    0.0
+          popOrder.newLimit                        Main                  src/Main.hs:129:23-64                   1678    1303967    0.0    0.0     1.1    1.2
+           popEmptyLimit                           Main                  src/Main.hs:(150,1)-(156,29)            1679    1303967    0.1    0.0     1.1    1.2
+            lookup                                 Data.HashMap          Data/HashMap.hs:277:1-56                1683    1303967    0.1    0.0     0.1    0.0
+             hash                                  Data.Hashable.Class   Data/Hashable/Class.hs:(405,5)-(407,36) 1684    1303967    0.0    0.0     0.0    0.0
+             some_lookup                           Data.HashMap          Data/HashMap.hs:(271,1)-(273,37)        1725       8289    0.0    0.0     0.0    0.0
+            popEmptyLimit.m                        Main                  src/Main.hs:151:7-23                    1680    1303967    0.1    0.1     0.9    1.1
+             view                                  Data.Heap             Data/Heap.hs:76:1-54                    1681    1303967    0.2    0.6     0.8    1.0
+              union                                Data.Heap.Internal    Data/Heap/Internal.hs:(134,1)-(141,79)  1705    2126476    0.4    0.2     0.5    0.3
+               rank                                Data.Heap.Internal    Data/Heap/Internal.hs:(93,1)-(94,23)    1713    1661596    0.0    0.0     0.0    0.0
+                _rank                              Data.Heap.Internal    Data/Heap/Internal.hs:44:14-18          1714    1484255    0.0    0.0     0.0    0.0
+               size                                Data.Heap.Internal    Data/Heap/Internal.hs:(98,1)-(99,23)    1716    1661596    0.0    0.0     0.0    0.0
+                _size                              Data.Heap.Internal    Data/Heap/Internal.hs:45:14-18          1717    1484255    0.0    0.0     0.0    0.0
+               _left                               Data.Heap.Internal    Data/Heap/Internal.hs:48:14-18          1712     830798    0.0    0.0     0.0    0.0
+               _right                              Data.Heap.Internal    Data/Heap/Internal.hs:49:14-19          1715     830798    0.0    0.0     0.0    0.0
+               union.p1                            Data.Heap.Internal    Data/Heap/Internal.hs:137:5-24          1708     830798    0.1    0.0     0.1    0.0
+                _priority                          Data.Heap.Internal    Data/Heap/Internal.hs:46:14-22          1709     830798    0.0    0.0     0.0    0.0
+               union.p2                            Data.Heap.Internal    Data/Heap/Internal.hs:138:5-24          1710     830798    0.0    0.0     0.0    0.0
+                _priority                          Data.Heap.Internal    Data/Heap/Internal.hs:46:14-22          1711     830798    0.0    0.0     0.0    0.0
+              _priority                            Data.Heap.Internal    Data/Heap/Internal.hs:46:14-22          1686    1303967    0.0    0.0     0.0    0.0
+              view.\                               Data.Heap             Data/Heap.hs:76:28-44                   1682    1303967    0.1    0.1     0.1    0.1
+               merge                               Data.Heap.Item        Data/Heap/Item.hs:110:5-25              1685    1303967    0.0    0.0     0.0    0.0
+              _left                                Data.Heap.Internal    Data/Heap/Internal.hs:48:14-18          1703    1295678    0.0    0.0     0.0    0.0
+              _right                               Data.Heap.Internal    Data/Heap/Internal.hs:49:14-19          1704    1295678    0.0    0.0     0.0    0.0
+          popOrder.newLimitMap                     Main                  src/Main.hs:128:23-83                   1687    1303967    0.0    0.0     0.0    0.0
+        popAskOrder.limit                          Main                  src/Main.hs:142:7-32                    1671    1303967    0.0    0.0     0.0    0.0
+         ordBookAskLimits                          Main                  src/Main.hs:51:3-18                     1672    1303967    0.0    0.0     0.0    0.0
+        popAskOrder.limitMap                       Main                  src/Main.hs:143:7-37                    1696    1303967    0.0    0.0     0.1    0.0
+         ordBookAskLimitMap                        Main                  src/Main.hs:49:3-20                     1697    1303967    0.0    0.0     0.0    0.0
+        popAskOrder.newLimit                       Main                  src/Main.hs:144:7-64                    1670    1303967    0.0    0.0     0.0    0.0
+        popAskOrder.newLimitMap                    Main                  src/Main.hs:144:7-64                    1706    1303967    0.0    0.0     0.0    0.0
+      execOrder.book1                              Main                  src/Main.hs:197:21-59                   1618    1303967    0.0    0.0     0.0    0.0
+      execOrder.book2                              Main                  src/Main.hs:198:21-60                   1615    1303967    0.0    0.0     0.0    0.0
+      execOrder.newBook                            Main                  src/Main.hs:203:21-97                   1621    1303967    0.0    0.3     0.0    0.3
+       deleteOrderFromMap                          Main                  src/Main.hs:(120,1)-(121,61)            1622    2607934    0.0    0.0     0.0    0.0
+      getBestOrderId                               Main                  src/Main.hs:217:1-70                    1582    1303967    0.0    0.0     1.5    0.5
+       getBestAskOrderId                           Main                  src/Main.hs:(224,1)-(227,23)            1599    1303967    0.2    0.0     0.7    0.3
+        getBestAsk                                 Main                  src/Main.hs:232:1-52                    1600    1303967    0.1    0.0     0.2    0.1
+         ordBookAskLimits                          Main                  src/Main.hs:51:3-18                     1601    1303967    0.0    0.0     0.0    0.0
+         viewHead                                  Data.Heap             Data/Heap.hs:81:1-26                    1602    1303967    0.0    0.0     0.1    0.1
+          view                                     Data.Heap             Data/Heap.hs:76:1-54                    1603    1303967    0.0    0.1     0.1    0.1
+           _priority                               Data.Heap.Internal    Data/Heap/Internal.hs:46:14-22          1604    1303967    0.0    0.0     0.0    0.0
+           view.\                                  Data.Heap             Data/Heap.hs:76:28-44                   1605    1303967    0.0    0.0     0.0    0.0
+            merge                                  Data.Heap.Item        Data/Heap/Item.hs:110:5-25              1606    1303967    0.0    0.0     0.0    0.0
+        getFirstOrderId                            Main                  src/Main.hs:190:1-93                    1611    1303967    0.1    0.1     0.1    0.1
+         isEmptyLimit                              Main                  src/Main.hs:239:1-43                    1612    1303967    0.0    0.0     0.0    0.0
+          lmtOrders                                Main                  src/Main.hs:31:3-11                     1613    1303967    0.0    0.0     0.0    0.0
+        lookup                                     Data.HashMap          Data/HashMap.hs:277:1-56                1607    1303967    0.2    0.0     0.3    0.1
+         hash                                      Data.Hashable.Class   Data/Hashable/Class.hs:(405,5)-(407,36) 1608    1303967    0.0    0.0     0.0    0.0
+         some_lookup                               Data.HashMap          Data/HashMap.hs:(271,1)-(273,37)        1610    1303967    0.0    0.0     0.0    0.0
+        ordBookAskLimitMap                         Main                  src/Main.hs:49:3-20                     1609    1303967    0.0    0.0     0.0    0.0
+       getBestBidOrderId                           Main                  src/Main.hs:(219,1)-(222,23)            1583    1303967    0.2    0.0     0.7    0.3
+        getBestBid                                 Main                  src/Main.hs:231:1-52                    1584    1303967    0.1    0.0     0.2    0.1
+         ordBookBidLimits                          Main                  src/Main.hs:52:3-18                     1585    1303967    0.0    0.0     0.0    0.0
+         viewHead                                  Data.Heap             Data/Heap.hs:81:1-26                    1586    1303967    0.1    0.0     0.1    0.1
+          view                                     Data.Heap             Data/Heap.hs:76:1-54                    1587    1303967    0.1    0.1     0.1    0.1
+           _priority                               Data.Heap.Internal    Data/Heap/Internal.hs:46:14-22          1588    1303967    0.0    0.0     0.0    0.0
+           view.\                                  Data.Heap             Data/Heap.hs:76:28-44                   1589    1303967    0.0    0.0     0.0    0.0
+            merge                                  Data.Heap.Item        Data/Heap/Item.hs:129:5-25              1590    1303967    0.0    0.0     0.0    0.0
+        getFirstOrderId                            Main                  src/Main.hs:190:1-93                    1595    1303967    0.0    0.1     0.1    0.1
+         isEmptyLimit                              Main                  src/Main.hs:239:1-43                    1596    1303967    0.0    0.0     0.0    0.0
+          lmtOrders                                Main                  src/Main.hs:31:3-11                     1597    1303967    0.0    0.0     0.0    0.0
+        lookup                                     Data.HashMap          Data/HashMap.hs:277:1-56                1591    1303967    0.2    0.0     0.2    0.1
+         hash                                      Data.Hashable.Class   Data/Hashable/Class.hs:(405,5)-(407,36) 1592    1303967    0.0    0.0     0.0    0.0
+         some_lookup                               Data.HashMap          Data/HashMap.hs:(271,1)-(273,37)        1594    1303967    0.0    0.0     0.0    0.0
+        ordBookBidLimitMap                         Main                  src/Main.hs:50:3-20                     1593    1303967    0.0    0.0     0.0    0.0
+      incrementTradeCount                          Main                  src/Main.hs:45:1-76                     1787    1303967    0.2    0.1     0.2    0.1
+       stTradeCount                                Main                  src/Main.hs:37:3-14                     1788    1303967    0.0    0.0     0.0    0.0
+      ordBookStats                                 Main                  src/Main.hs:53:3-14                     1783    1303967    0.0    0.0     0.0    0.0
+    addOrderVar.\.book                             Main                  src/Main.hs:294:51-95                   1518   10000000    0.0    0.0     0.0    0.0
+  makeRandomOrder                                  Main                  src/Main.hs:(247,1)-(251,75)            1384   10000000    1.4    2.8    46.1   51.4
+   randomRIO                                       System.Random         System/Random.hs:321:3-49               1440   10000000    0.3    0.3    29.0   35.1
+    getStdRandom                                   System.Random         System/Random.hs:(586,1)-(587,26)       1441   10000000    2.5    4.9    28.7   34.8
+     getStdRandom.swap                             System.Random         System/Random.hs:587:9-26               1442   20000000    0.0    0.0     0.0    0.0
+     randomR                                       System.Random         System/Random.hs:342:3-43               1443   20000000    0.8    0.0    26.1   29.9
+      randomIvalInteger                            System.Random         System/Random.hs:(468,1)-(489,76)       1444   20000000    5.5    6.6    25.3   29.9
+       randomIvalInteger.f                         System.Random         System/Random.hs:(486,8)-(489,76)       1447   50000000    4.8    1.8    18.0   20.7
+        randomIvalInteger.f.(...)                  System.Random         System/Random.hs:488:25-39              1450   30000000    1.1    1.5    10.6   15.3
+         stdNext                                   System.Random         System/Random.hs:(518,1)-(528,64)       1451   30000000    8.6   10.8     9.6   13.8
+          stdNext.k                                System.Random         System/Random.hs:522:17-38              1454   30000000    0.0    0.0     0.0    0.0
+          stdNext.k'                               System.Random         System/Random.hs:526:17-38              1457   30000000    0.0    0.0     0.0    0.0
+          stdNext.s1'                              System.Random         System/Random.hs:523:17-59              1455   30000000    0.0    0.0     0.0    0.0
+          stdNext.s1''                             System.Random         System/Random.hs:524:17-64              1456   30000000    0.3    1.0     0.3    1.0
+          stdNext.s2'                              System.Random         System/Random.hs:527:17-60              1458   30000000    0.0    0.0     0.0    0.0
+          stdNext.s2''                             System.Random         System/Random.hs:528:17-64              1459   30000000    0.3    1.0     0.3    1.0
+          stdNext.z                                System.Random         System/Random.hs:520:17-34              1453   30000000    0.4    1.0     0.4    1.0
+          stdNext.z'                               System.Random         System/Random.hs:519:17-58              1452   30000000    0.0    0.0     0.0    0.0
+        randomIvalInteger.f.g'                     System.Random         System/Random.hs:488:25-39              1460   30000000    0.0    0.0     0.0    0.0
+        randomIvalInteger.f.v'                     System.Random         System/Random.hs:489:25-76              1448   30000000    2.6    3.6     2.6    3.6
+        randomIvalInteger.f.x                      System.Random         System/Random.hs:488:25-39              1449   30000000    0.0    0.0     0.0    0.0
+       randomIvalInteger.k                         System.Random         System/Random.hs:482:8-20               1445   20000000    0.9    2.0     0.9    2.0
+       randomIvalInteger.magtgt                    System.Random         System/Random.hs:483:8-21               1446   20000000    0.9    0.7     0.9    0.7
+   randomIO                                        System.Random         System/Random.hs:326:3-40               1387          0    0.1    0.0    15.7   13.5
+    getStdRandom                                   System.Random         System/Random.hs:(586,1)-(587,26)       1388          0    1.4    2.6    15.6   13.5
+     getStdRandom.swap                             System.Random         System/Random.hs:587:9-26               1396   10000000    0.0    0.0     0.0    0.0
+     random                                        System.Random         System/Random.hs:399:3-49               1397   10000000    0.2    0.0    14.3   10.8
+      randomR                                      System.Random         System/Random.hs:(387,3)-(397,30)       1398   10000000    0.9    0.0    14.1   10.8
+       randomR.bool2Int                            System.Random         System/Random.hs:(392,10)-(393,27)      1399   20000000    0.0    0.0     0.0    0.0
+       randomIvalInteger                           System.Random         System/Random.hs:(468,1)-(489,76)       1400   10000000    3.2    3.3    13.0   10.8
+        randomIvalInteger.f                        System.Random         System/Random.hs:(486,8)-(489,76)       1405   20000000    2.2    0.5     8.7    6.6
+         randomIvalInteger.f.(...)                 System.Random         System/Random.hs:488:25-39              1408   10000000    0.6    0.5     5.5    5.1
+          stdNext                                  System.Random         System/Random.hs:(518,1)-(528,64)       1417   10000000    4.4    3.6     4.9    4.6
+           stdNext.k                               System.Random         System/Random.hs:522:17-38              1420   10000000    0.0    0.0     0.0    0.0
+           stdNext.k'                              System.Random         System/Random.hs:526:17-38              1423   10000000    0.0    0.0     0.0    0.0
+           stdNext.s1'                             System.Random         System/Random.hs:523:17-59              1421   10000000    0.0    0.0     0.0    0.0
+           stdNext.s1''                            System.Random         System/Random.hs:524:17-64              1422   10000000    0.2    0.3     0.2    0.3
+           stdNext.s2'                             System.Random         System/Random.hs:527:17-60              1424   10000000    0.0    0.0     0.0    0.0
+           stdNext.s2''                            System.Random         System/Random.hs:528:17-64              1425   10000000    0.1    0.3     0.1    0.3
+           stdNext.z                               System.Random         System/Random.hs:520:17-34              1419   10000000    0.2    0.3     0.2    0.3
+           stdNext.z'                              System.Random         System/Random.hs:519:17-58              1418   10000000    0.0    0.0     0.0    0.0
+         randomIvalInteger.f.g'                    System.Random         System/Random.hs:488:25-39              1438   10000000    0.0    0.0     0.0    0.0
+         randomIvalInteger.f.v'                    System.Random         System/Random.hs:489:25-76              1406   10000000    1.0    1.0     1.0    1.0
+         randomIvalInteger.f.x                     System.Random         System/Random.hs:488:25-39              1407   10000000    0.0    0.0     0.0    0.0
+        randomIvalInteger.k                        System.Random         System/Random.hs:482:8-20               1401   10000000    0.4    0.7     0.4    0.7
+        randomIvalInteger.magtgt                   System.Random         System/Random.hs:483:8-21               1402   10000000    0.7    0.3     0.7    0.3
+       randomR.int2Bool                            System.Random         System/Random.hs:(396,10)-(397,30)      1439   10000000    0.1    0.0     0.1    0.0
+ insertRandomOrders                                Main                  src/Main.hs:(298,1)-(302,57)            1381          1    0.0    0.0     0.0    0.0
+ CAF                                               Data.Time.Clock.POSIX <entire-module>                          975          0    0.0    0.0     0.0    0.0
+ CAF                                               GHC.Float             <entire-module>                          730          0    0.0    0.0     0.0    0.0
+ CAF                                               GHC.IO.Encoding       <entire-module>                          728          0    0.0    0.0     0.0    0.0
+ CAF                                               GHC.IO.Exception      <entire-module>                          727          0    0.0    0.0     0.0    0.0
+ CAF                                               GHC.IO.Handle.FD      <entire-module>                          726          0    0.0    0.0     0.0    0.0
+ CAF                                               GHC.IO.Handle.Text    <entire-module>                          725          0    0.0    0.0     0.0    0.0
+ CAF                                               GHC.Show              <entire-module>                          711          0    0.0    0.0     0.0    0.0
+ CAF                                               GHC.TopHandler        <entire-module>                          710          0    0.0    0.0     0.0    0.0
+ CAF                                               GHC.Conc.Signal       <entire-module>                          709          0    0.0    0.0     0.0    0.0
+ CAF                                               GHC.IO.Encoding.Iconv <entire-module>                          708          0    0.0    0.0     0.0    0.0
+ CAF:$fEqTimeSpec1                                 System.Clock          <no location info>                       816          0    0.0    0.0     0.0    0.0
+  normalize                                        System.Clock          System/Clock.hsc:(235,1)-(237,60)       1801          0    0.0    0.0     0.0    0.0
+   normalize.(...)                                 System.Clock          System/Clock.hsc:237:36-60              1802          0    0.0    0.0     0.0    0.0
+    s2ns                                           System.Clock          System/Clock.hsc:232:1-11               1803          1    0.0    0.0     0.0    0.0
+ CAF:$fEqTimeSpec6                                 System.Clock          <no location info>                       815          0    0.0    0.0     0.0    0.0
+  normalize                                        System.Clock          System/Clock.hsc:(235,1)-(237,60)       1807          0    0.0    0.0     0.0    0.0
+   s2ns                                            System.Clock          System/Clock.hsc:232:1-11               1808          1    0.0    0.0     0.0    0.0
+ CAF:$fRandomBool1                                 System.Random         <no location info>                      1134          0    0.0    0.0     0.0    0.0
+  randomIO                                         System.Random         System/Random.hs:326:3-40               1385          1    0.0    0.0     0.0    0.0
+   getStdRandom                                    System.Random         System/Random.hs:(586,1)-(587,26)       1386          1    0.0    0.0     0.0    0.0
+ CAF:$fRandomGenStdGen_$cnext                      System.Random         System/Random.hs:218:3-6                 985          0    0.0    0.0     0.0    0.0
+  next                                             System.Random         System/Random.hs:218:3-17               1409          1    0.0    0.0     0.0    0.0
+ CAF:$fShowLimit8                                  Main                  <no location info>                      1288          0    0.0    0.0     0.0    0.0
+  showsPrec                                        Main                  src/Main.hs:16:28-31                    1760          0    0.0    0.0     0.0    0.0
+ CAF:arg_rmZQ                                      Main                  <no location info>                      1320          0    0.0    0.0     0.0    0.0
+  simpleStats                                      Main                  src/Main.hs:(269,1)-(288,97)            1837          0    0.0    0.0     0.0    0.0
+ CAF:b_rgpW                                        System.Random         System/Random.hs:473:8                   993          0    0.0    0.0     0.0    0.0
+  randomIvalInteger                                System.Random         System/Random.hs:(468,1)-(489,76)       1435          0    0.0    0.0     0.0    0.0
+   randomIvalInteger.b                             System.Random         System/Random.hs:473:8-54               1437          1    0.0    0.0     0.0    0.0
+   randomIvalInteger.genhi                         System.Random         System/Random.hs:472:8-36               1436          1    0.0    0.0     0.0    0.0
+ CAF:ds_rgpT                                       System.Random         <no location info>                       990          0    0.0    0.0     0.0    0.0
+  randomIvalInteger                                System.Random         System/Random.hs:(468,1)-(489,76)       1431          0    0.0    0.0     0.0    0.0
+   randomIvalInteger.(...)                         System.Random         System/Random.hs:472:8-36               1432          1    0.0    0.0     0.0    0.0
+    genRange                                       System.Random         System/Random.hs:219:3-23               1433          1    0.0    0.0     0.0    0.0
+ CAF:empty                                         Data.Heap.Internal    Data/Heap/Internal.hs:103:1-5            963          0    0.0    0.0     0.0    0.0
+  empty                                            Data.Heap.Internal    Data/Heap/Internal.hs:103:1-13          1492          1    0.0    0.0     0.0    0.0
+ CAF:fromList1                                     Data.HashMap          <no location info>                       941          0    0.0    0.0     0.0    0.0
+  empty                                            Data.HashMap          Data/HashMap.hs:292:1-19                1504          1    0.0    0.0     0.0    0.0
+ CAF:genlo_rgpU                                    System.Random         System/Random.hs:472:9-13                991          0    0.0    0.0     0.0    0.0
+  randomIvalInteger                                System.Random         System/Random.hs:(468,1)-(489,76)       1429          0    0.0    0.0     0.0    0.0
+   randomIvalInteger.genlo                         System.Random         System/Random.hs:472:8-36               1430          1    0.0    0.0     0.0    0.0
+ CAF:getStdRandom3                                 System.Random         <no location info>                       981          0    0.0    0.0     0.0    0.0
+  theStdGen                                        System.Random         System/Random.hs:(566,1)-(568,15)       1390          0    0.0    0.0     0.0    0.0
+   mkStdRNG                                        System.Random         System/Random.hs:(452,1)-(455,55)       1391          1    0.0    0.0     0.0    0.0
+ CAF:getStdRandom6                                 System.Random         <no location info>                       978          0    0.0    0.0     0.0    0.0
+  getTime                                          System.Random         System/Random.hs:(131,1)-(134,60)       1393          1    0.0    0.0     0.0    0.0
+ CAF:getTime9                                      System.Clock          <no location info>                       744          0    0.0    0.0     0.0    0.0
+  getTime                                          System.Clock          System/Clock.hsc:185:1-64               1370          0    0.0    0.0     0.0    0.0
+   allocaAndPeek                                   System.Clock          System/Clock.hsc:166:1-52               1371          1    0.0    0.0     0.0    0.0
+ CAF:insertRandomOrders1                           Main                  <no location info>                      1143          0    0.0    0.0     0.5    1.5
+  insertRandomOrders                               Main                  src/Main.hs:(298,1)-(302,57)            1382          0    0.5    1.5     0.5    1.5
+ CAF:insertRandomOrders4                           Main                  <no location info>                      1146          0    0.0    0.0     0.0    0.0
+  makeRandomOrder                                  Main                  src/Main.hs:(247,1)-(251,75)            1461          0    0.0    0.0     0.0    0.0
+   randomRIO                                       System.Random         System/Random.hs:321:3-49               1462          1    0.0    0.0     0.0    0.0
+    getStdRandom                                   System.Random         System/Random.hs:(586,1)-(587,26)       1463          1    0.0    0.0     0.0    0.0
+ CAF:lvl6_rgpV                                     System.Random         <no location info>                       992          0    0.0    0.0     0.0    0.0
+  randomIvalInteger                                System.Random         System/Random.hs:(468,1)-(489,76)       1426          0    0.0    0.0     0.0    0.0
+   randomIvalInteger.f                             System.Random         System/Random.hs:(486,8)-(489,76)       1427          0    0.0    0.0     0.0    0.0
+    randomIvalInteger.f.v'                         System.Random         System/Random.hs:489:25-76              1428          0    0.0    0.0     0.0    0.0
+ CAF:lvl82_rmZI                                    Main                  <no location info>                      1308          0    0.0    0.0     0.0    0.0
+  <                                                Data.Heap.Item        Data/Heap/Item.hs:106:67-69             1546          1    0.0    0.0     0.0    0.0
+ CAF:main1                                         Main                  <no location info>                      1324          0    0.0    0.0     0.0    0.0
+  main                                             Main                  src/Main.hs:(254,1)-(267,17)            1360          1    0.0    0.0     0.0    0.0
+ CAF:main2                                         Main                  <no location info>                      1141          0    0.0    0.0     0.0    0.0
+  main                                             Main                  src/Main.hs:(254,1)-(267,17)            1466          0    0.0    0.0     0.0    0.0
+   main.periodicStatus                             Main                  src/Main.hs:(260,9)-(267,17)            1467          0    0.0    0.0     0.0    0.0
+    main.periodicStatus.loop                       Main                  src/Main.hs:(261,15)-(266,20)           1468          0    0.0    0.0     0.0    0.0
+     getTime                                       System.Clock          System/Clock.hsc:185:1-64               1469          1    0.0    0.0     0.0    0.0
+      clockToConst                                 System.Clock          System/Clock.hsc:(142,1)-(160,32)       1470          1    0.0    0.0     0.0    0.0
+ CAF:main3                                         Main                  <no location info>                      1147          0    0.0    0.0     0.0    0.0
+  main                                             Main                  src/Main.hs:(254,1)-(267,17)            1363          0    0.0    0.0     0.0    0.0
+   makeBookVar                                     Main                  src/Main.hs:(289,1)-(291,26)            1364          1    0.0    0.0     0.0    0.0
+ CAF:main5                                         Main                  <no location info>                      1142          0    0.0    0.0     0.0    0.0
+  main                                             Main                  src/Main.hs:(254,1)-(267,17)            1362          0    0.0    0.0     0.0    0.0
+ CAF:main_clock                                    Main                  src/Main.hs:256:7-11                    1140          0    0.0    0.0     0.0    0.0
+  main                                             Main                  src/Main.hs:(254,1)-(267,17)            1368          0    0.0    0.0     0.0    0.0
+   main.clock                                      Main                  src/Main.hs:256:7-23                    1369          1    0.0    0.0     0.0    0.0
+ CAF:q_rgpS                                        System.Random         System/Random.hs:481:8                   989          0    0.0    0.0     0.0    0.0
+  randomIvalInteger                                System.Random         System/Random.hs:(468,1)-(489,76)       1403          0    0.0    0.0     0.0    0.0
+   randomIvalInteger.q                             System.Random         System/Random.hs:481:8-15               1404          1    0.0    0.0     0.0    0.0
+ CAF:stdRange                                      System.Random         System/Random.hs:514:1-8                 977          0    0.0    0.0     0.0    0.0
+  stdRange                                         System.Random         System/Random.hs:514:1-26               1434          1    0.0    0.0     0.0    0.0
+ CAF:theStdGen                                     System.Random         System/Random.hs:566:1-9                 982          0    0.0    0.0     0.0    0.0
+  theStdGen                                        System.Random         System/Random.hs:(566,1)-(568,15)       1389          1    0.0    0.0     0.0    0.0
+   mkStdRNG                                        System.Random         System/Random.hs:(452,1)-(455,55)       1392          0    0.0    0.0     0.0    0.0
+    createStdGen                                   System.Random         System/Random.hs:276:1-44               1410          1    0.0    0.0     0.0    0.0
+     mkStdGen32                                    System.Random         System/Random.hs:(267,1)-(273,36)       1411          1    0.0    0.0     0.0    0.0
+      mkStdGen32.(...)                             System.Random         System/Random.hs:272:9-39               1413          1    0.0    0.0     0.0    0.0
+      mkStdGen32.q                                 System.Random         System/Random.hs:272:9-39               1416          1    0.0    0.0     0.0    0.0
+      mkStdGen32.s                                 System.Random         System/Random.hs:271:9-45               1414          1    0.0    0.0     0.0    0.0
+      mkStdGen32.s1                                System.Random         System/Random.hs:272:9-39               1412          1    0.0    0.0     0.0    0.0
+      mkStdGen32.s2                                System.Random         System/Random.hs:273:9-36               1415          1    0.0    0.0     0.0    0.0
+    getTime                                        System.Random         System/Random.hs:(131,1)-(134,60)       1394          0    0.0    0.0     0.0    0.0
+     getTime.daytime                               System.Random         System/Random.hs:133:7-44               1395          1    0.0    0.0     0.0    0.0
+ main                                              Main                  src/Main.hs:(254,1)-(267,17)            1361          0    0.0    0.0     0.0    0.2
+  main.periodicStatus                              Main                  src/Main.hs:(260,9)-(267,17)            1379          1    0.0    0.0     0.0    0.2
+   main.periodicStatus.loop                        Main                  src/Main.hs:(261,15)-(266,20)           1380          1    0.0    0.0     0.0    0.2
+    simpleStats                                    Main                  src/Main.hs:(269,1)-(288,97)            1479       1916    0.0    0.2     0.0    0.2
+     showsPrec                                     Main                  src/Main.hs:16:28-31                    1759       3832    0.0    0.0     0.0    0.0
+     size                                          Data.Heap.Internal    Data/Heap/Internal.hs:(98,1)-(99,23)    1740       3832    0.0    0.0     0.0    0.0
+      _size                                        Data.Heap.Internal    Data/Heap/Internal.hs:45:14-18          1742       3832    0.0    0.0     0.0    0.0
+     getBestAsk                                    Main                  src/Main.hs:232:1-52                    1733       1916    0.0    0.0     0.0    0.0
+      ordBookAskLimits                             Main                  src/Main.hs:51:3-18                     1734       1916    0.0    0.0     0.0    0.0
+      viewHead                                     Data.Heap             Data/Heap.hs:81:1-26                    1735       1916    0.0    0.0     0.0    0.0
+       view                                        Data.Heap             Data/Heap.hs:76:1-54                    1736       1916    0.0    0.0     0.0    0.0
+        _priority                                  Data.Heap.Internal    Data/Heap/Internal.hs:46:14-22          1737       1916    0.0    0.0     0.0    0.0
+        view.\                                     Data.Heap             Data/Heap.hs:76:28-44                   1738       1916    0.0    0.0     0.0    0.0
+         merge                                     Data.Heap.Item        Data/Heap/Item.hs:110:5-25              1739       1916    0.0    0.0     0.0    0.0
+     getBestAskOrderId                             Main                  src/Main.hs:(224,1)-(227,23)            1744       1916    0.0    0.0     0.0    0.0
+      getBestAsk                                   Main                  src/Main.hs:232:1-52                    1745       1916    0.0    0.0     0.0    0.0
+       ordBookAskLimits                            Main                  src/Main.hs:51:3-18                     1746       1916    0.0    0.0     0.0    0.0
+       viewHead                                    Data.Heap             Data/Heap.hs:81:1-26                    1747       1916    0.0    0.0     0.0    0.0
+        view                                       Data.Heap             Data/Heap.hs:76:1-54                    1748       1916    0.0    0.0     0.0    0.0
+         _priority                                 Data.Heap.Internal    Data/Heap/Internal.hs:46:14-22          1749       1916    0.0    0.0     0.0    0.0
+         view.\                                    Data.Heap             Data/Heap.hs:76:28-44                   1750       1916    0.0    0.0     0.0    0.0
+          merge                                    Data.Heap.Item        Data/Heap/Item.hs:110:5-25              1751       1916    0.0    0.0     0.0    0.0
+      getFirstOrderId                              Main                  src/Main.hs:190:1-93                    1756       1916    0.0    0.0     0.0    0.0
+       isEmptyLimit                                Main                  src/Main.hs:239:1-43                    1757       1916    0.0    0.0     0.0    0.0
+        lmtOrders                                  Main                  src/Main.hs:31:3-11                     1758       1916    0.0    0.0     0.0    0.0
+       lmtOrders                                   Main                  src/Main.hs:31:3-11                     1761       1916    0.0    0.0     0.0    0.0
+      lookup                                       Data.HashMap          Data/HashMap.hs:277:1-56                1752       1916    0.0    0.0     0.0    0.0
+       hash                                        Data.Hashable.Class   Data/Hashable/Class.hs:(405,5)-(407,36) 1753       1916    0.0    0.0     0.0    0.0
+       some_lookup                                 Data.HashMap          Data/HashMap.hs:(271,1)-(273,37)        1755       1916    0.0    0.0     0.0    0.0
+      ordBookAskLimitMap                           Main                  src/Main.hs:49:3-20                     1754       1916    0.0    0.0     0.0    0.0
+     getBestBid                                    Main                  src/Main.hs:231:1-52                    1726       1916    0.0    0.0     0.0    0.0
+      ordBookBidLimits                             Main                  src/Main.hs:52:3-18                     1727       1916    0.0    0.0     0.0    0.0
+      viewHead                                     Data.Heap             Data/Heap.hs:81:1-26                    1728       1916    0.0    0.0     0.0    0.0
+       view                                        Data.Heap             Data/Heap.hs:76:1-54                    1729       1916    0.0    0.0     0.0    0.0
+        _priority                                  Data.Heap.Internal    Data/Heap/Internal.hs:46:14-22          1730       1916    0.0    0.0     0.0    0.0
+        view.\                                     Data.Heap             Data/Heap.hs:76:28-44                   1731       1916    0.0    0.0     0.0    0.0
+         merge                                     Data.Heap.Item        Data/Heap/Item.hs:129:5-25              1732       1916    0.0    0.0     0.0    0.0
+     getBestBidOrderId                             Main                  src/Main.hs:(219,1)-(222,23)            1763       1916    0.0    0.0     0.0    0.0
+      getBestBid                                   Main                  src/Main.hs:231:1-52                    1764       1916    0.0    0.0     0.0    0.0
+       ordBookBidLimits                            Main                  src/Main.hs:52:3-18                     1765       1916    0.0    0.0     0.0    0.0
+       viewHead                                    Data.Heap             Data/Heap.hs:81:1-26                    1766       1916    0.0    0.0     0.0    0.0
+        view                                       Data.Heap             Data/Heap.hs:76:1-54                    1767       1916    0.0    0.0     0.0    0.0
+         _priority                                 Data.Heap.Internal    Data/Heap/Internal.hs:46:14-22          1768       1916    0.0    0.0     0.0    0.0
+         view.\                                    Data.Heap             Data/Heap.hs:76:28-44                   1769       1916    0.0    0.0     0.0    0.0
+          merge                                    Data.Heap.Item        Data/Heap/Item.hs:129:5-25              1770       1916    0.0    0.0     0.0    0.0
+      getFirstOrderId                              Main                  src/Main.hs:190:1-93                    1775       1916    0.0    0.0     0.0    0.0
+       isEmptyLimit                                Main                  src/Main.hs:239:1-43                    1776       1916    0.0    0.0     0.0    0.0
+        lmtOrders                                  Main                  src/Main.hs:31:3-11                     1777       1916    0.0    0.0     0.0    0.0
+       lmtOrders                                   Main                  src/Main.hs:31:3-11                     1778       1916    0.0    0.0     0.0    0.0
+      lookup                                       Data.HashMap          Data/HashMap.hs:277:1-56                1771       1916    0.0    0.0     0.0    0.0
+       hash                                        Data.Hashable.Class   Data/Hashable/Class.hs:(405,5)-(407,36) 1772       1916    0.0    0.0     0.0    0.0
+       some_lookup                                 Data.HashMap          Data/HashMap.hs:(271,1)-(273,37)        1774       1916    0.0    0.0     0.0    0.0
+      ordBookBidLimitMap                           Main                  src/Main.hs:50:3-20                     1773       1916    0.0    0.0     0.0    0.0
+     ordBookAskLimits                              Main                  src/Main.hs:51:3-18                     1743       1916    0.0    0.0     0.0    0.0
+     ordBookBidLimits                              Main                  src/Main.hs:52:3-18                     1741       1916    0.0    0.0     0.0    0.0
+     ordBookStats                                  Main                  src/Main.hs:53:3-14                     1816       1916    0.0    0.0     0.0    0.0
+     simpleStats.orderRate                         Main                  src/Main.hs:272:7-53                    1792       1916    0.0    0.0     0.0    0.0
+      simpleStats.rate                             Main                  src/Main.hs:(285,9)-(288,97)            1793       1916    0.0    0.0     0.0    0.0
+       sec                                         System.Clock          System/Clock.hsc:201:5-7                1794       1916    0.0    0.0     0.0    0.0
+       simpleStats.rate.damount                    Main                  src/Main.hs:286:37-65                   1812       1916    0.0    0.0     0.0    0.0
+       simpleStats.rate.ddiff                      Main                  src/Main.hs:287:37-67                   1814       1916    0.0    0.0     0.0    0.0
+        sec                                        System.Clock          System/Clock.hsc:201:5-7                1815       1916    0.0    0.0     0.0    0.0
+       simpleStats.rate.diff                       Main                  src/Main.hs:285:37-65                   1795       1916    0.0    0.0     0.0    0.0
+        diffTimeSpec                               System.Clock          System/Clock.hsc:283:1-38               1796       1916    0.0    0.0     0.0    0.0
+         -                                         System.Clock          System/Clock.hsc:241:3-81               1797       1916    0.0    0.0     0.0    0.0
+          normalize                                System.Clock          System/Clock.hsc:(235,1)-(237,60)       1798       1916    0.0    0.0     0.0    0.0
+           normalize.(...)                         System.Clock          System/Clock.hsc:237:36-60              1800         90    0.0    0.0     0.0    0.0
+           normalize.q                             System.Clock          System/Clock.hsc:237:36-60              1799         90    0.0    0.0     0.0    0.0
+           normalize.r                             System.Clock          System/Clock.hsc:237:36-60              1804         90    0.0    0.0     0.0    0.0
+         abs                                       System.Clock          System/Clock.hsc:(256,3)-(257,100)      1805       1916    0.0    0.0     0.0    0.0
+          normalize                                System.Clock          System/Clock.hsc:(235,1)-(237,60)       1806       3832    0.0    0.0     0.0    0.0
+           normalize.(...)                         System.Clock          System/Clock.hsc:237:36-60              1810       1916    0.0    0.0     0.0    0.0
+           normalize.q                             System.Clock          System/Clock.hsc:237:36-60              1809       1916    0.0    0.0     0.0    0.0
+           normalize.r                             System.Clock          System/Clock.hsc:237:36-60              1811       1916    0.0    0.0     0.0    0.0
+      stOrderCount                                 Main                  src/Main.hs:36:3-14                     1813       1916    0.0    0.0     0.0    0.0
+     simpleStats.start                             Main                  src/Main.hs:271:7-29                    1790       1916    0.0    0.0     0.0    0.0
+      stCreated                                    Main                  src/Main.hs:38:3-11                     1791       1916    0.0    0.0     0.0    0.0
+     simpleStats.stats                             Main                  src/Main.hs:270:7-31                    1780       1916    0.0    0.0     0.0    0.0
+      ordBookStats                                 Main                  src/Main.hs:53:3-14                     1781       1916    0.0    0.0     0.0    0.0
+     simpleStats.tradesRate                        Main                  src/Main.hs:273:7-54                    1818       1916    0.0    0.0     0.0    0.0
+      simpleStats.rate                             Main                  src/Main.hs:(285,9)-(288,97)            1819       1916    0.0    0.0     0.0    0.0
+       sec                                         System.Clock          System/Clock.hsc:201:5-7                1820       1916    0.0    0.0     0.0    0.0
+       simpleStats.rate.damount                    Main                  src/Main.hs:286:37-65                   1833       1916    0.0    0.0     0.0    0.0
+       simpleStats.rate.ddiff                      Main                  src/Main.hs:287:37-67                   1835       1916    0.0    0.0     0.0    0.0
+        sec                                        System.Clock          System/Clock.hsc:201:5-7                1836       1916    0.0    0.0     0.0    0.0
+       simpleStats.rate.diff                       Main                  src/Main.hs:285:37-65                   1821       1916    0.0    0.0     0.0    0.0
+        diffTimeSpec                               System.Clock          System/Clock.hsc:283:1-38               1822       1916    0.0    0.0     0.0    0.0
+         -                                         System.Clock          System/Clock.hsc:241:3-81               1823       1916    0.0    0.0     0.0    0.0
+          normalize                                System.Clock          System/Clock.hsc:(235,1)-(237,60)       1824       1916    0.0    0.0     0.0    0.0
+           normalize.(...)                         System.Clock          System/Clock.hsc:237:36-60              1826         90    0.0    0.0     0.0    0.0
+           normalize.q                             System.Clock          System/Clock.hsc:237:36-60              1825         90    0.0    0.0     0.0    0.0
+           normalize.r                             System.Clock          System/Clock.hsc:237:36-60              1827         90    0.0    0.0     0.0    0.0
+         abs                                       System.Clock          System/Clock.hsc:(256,3)-(257,100)      1828       1916    0.0    0.0     0.0    0.0
+          normalize                                System.Clock          System/Clock.hsc:(235,1)-(237,60)       1829       3832    0.0    0.0     0.0    0.0
+           normalize.(...)                         System.Clock          System/Clock.hsc:237:36-60              1831       1916    0.0    0.0     0.0    0.0
+           normalize.q                             System.Clock          System/Clock.hsc:237:36-60              1830       1916    0.0    0.0     0.0    0.0
+           normalize.r                             System.Clock          System/Clock.hsc:237:36-60              1832       1916    0.0    0.0     0.0    0.0
+      stTradeCount                                 Main                  src/Main.hs:37:3-14                     1834       1916    0.0    0.0     0.0    0.0
+     stOrderCount                                  Main                  src/Main.hs:36:3-14                     1789       1916    0.0    0.0     0.0    0.0
+     stTradeCount                                  Main                  src/Main.hs:37:3-14                     1817       1916    0.0    0.0     0.0    0.0
+    getTime                                        System.Clock          System/Clock.hsc:185:1-64               1471          0    0.0    0.0     0.0    0.0
+     allocaAndPeek                                 System.Clock          System/Clock.hsc:166:1-52               1472          0    0.0    0.0     0.0    0.0
+      alignment                                    System.Clock          System/Clock.hsc:219:3-17               1474       1916    0.0    0.0     0.0    0.0
+      allocaAndPeek.\                              System.Clock          System/Clock.hsc:166:36-52              1475       1916    0.0    0.0     0.0    0.0
+       peek                                        System.Clock          System/Clock.hsc:(225,3)-(228,59)       1476       1916    0.0    0.0     0.0    0.0
+        peek.\                                     System.Clock          System/Clock.hsc:227:35-55              1478       1916    0.0    0.0     0.0    0.0
+        peek.\                                     System.Clock          System/Clock.hsc:226:35-55              1477       1916    0.0    0.0     0.0    0.0
+      sizeOf                                       System.Clock          System/Clock.hsc:218:3-17               1473       1916    0.0    0.0     0.0    0.0
+  makeBookVar                                      Main                  src/Main.hs:(289,1)-(291,26)            1365          0    0.0    0.0     0.0    0.0
+   emptyBook                                       Main                  src/Main.hs:(235,1)-(236,75)            1481          1    0.0    0.0     0.0    0.0
+    emptyStats                                     Main                  src/Main.hs:42:1-47                     1784          1    0.0    0.0     0.0    0.0
+   getTime                                         System.Clock          System/Clock.hsc:185:1-64               1366          1    0.0    0.0     0.0    0.0
+    clockToConst                                   System.Clock          System/Clock.hsc:(142,1)-(160,32)       1367          1    0.0    0.0     0.0    0.0
+    allocaAndPeek                                  System.Clock          System/Clock.hsc:166:1-52               1372          0    0.0    0.0     0.0    0.0
+     alignment                                     System.Clock          System/Clock.hsc:219:3-17               1374          1    0.0    0.0     0.0    0.0
+     allocaAndPeek.\                               System.Clock          System/Clock.hsc:166:36-52              1375          1    0.0    0.0     0.0    0.0
+      peek                                         System.Clock          System/Clock.hsc:(225,3)-(228,59)       1376          1    0.0    0.0     0.0    0.0
+       peek.\                                      System.Clock          System/Clock.hsc:227:35-55              1378          1    0.0    0.0     0.0    0.0
+       peek.\                                      System.Clock          System/Clock.hsc:226:35-55              1377          1    0.0    0.0     0.0    0.0
+     sizeOf                                        System.Clock          System/Clock.hsc:218:3-17               1373          1    0.0    0.0     0.0    0.0
